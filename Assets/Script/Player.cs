@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        hpbar.value = currentHp / maxHp;   
+       // hpbar.value = currentHp / maxHp;   
 
     }
 

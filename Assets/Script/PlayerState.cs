@@ -58,11 +58,11 @@ public class PlayerState : MonoBehaviour
     {
         if (statHp < 10 && GameManager.StatCoin > useCoin[statHp])
         {
-            statHp++;
-            HPText.text = "Level: " + statHp + "\nHP: " + stat[0][statHp];
-            PlayerPrefs.SetInt("statHp", statHp);
-            GameManager.StatCoin -= 100;
-            StatCoinText.text = GameManager.StatCoin + "Coin";
+            GameManager.StatCoin -= useCoin[statHp];                                //코인 소모
+            statHp++;                                                               //해당 스탯 레벨업
+            HPText.text = "Level: " + statHp + "\nHP: " + stat[0][statHp];          //해당 스탯 수치 택스트 변경
+            PlayerPrefs.SetInt("statHp", statHp);                                   //스탯 레벨 저장
+            StatCoinText.text = GameManager.StatCoin + "Coin";                      //남은 코인 택스트 변경
         }
         Debug.Log(statHp);
     }

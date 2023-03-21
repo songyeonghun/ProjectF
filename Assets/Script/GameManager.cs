@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    static public int StatCoin=0;
+    static public int StatCoin;
 
     private void Start()
     {
