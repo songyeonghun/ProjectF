@@ -12,9 +12,15 @@ public class Player : MonoBehaviour
     //플레이어의 소지 열쇠
     int key = 0;
 
+
+    private void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     void Update()
     {
         hpbar.value = currentHp / maxHp;   
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
