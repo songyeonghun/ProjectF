@@ -39,6 +39,7 @@ private void OnTriggerEnter2D(Collider2D collision)
             emp++;
             Destroy(collision.gameObject);
         }
+        //코인먹으면 코인증가 (일반코인)
         if (collision.gameObject.tag == "coin")
         {
             coin++;
