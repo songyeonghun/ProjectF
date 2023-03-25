@@ -10,15 +10,11 @@ public class PlayerController : MonoBehaviour
     //emp
     public GameObject emp;
 
-
     //플레이어 스탯
-    int Hp;
-    int MaxHp;
     int MoveSpeed = PlayerState.stat[2][PlayerState.statMoveSpeed];  
 
     //대쉬
     bool canDash = true;
-    bool isDashing = false;
     int DashSpeed = 2;
     float DashTime=0.2f;
     float dashCoolTime = 0.5f;
@@ -59,7 +55,6 @@ public class PlayerController : MonoBehaviour
         rb.rotation = angle;
     }
 
-
     //대쉬와 쿨타임
     private IEnumerator Dash()
     {
@@ -74,64 +69,4 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashCoolTime);
         canDash = true;
     }
-
-
-
-
-    /*
-    SpriteRenderer spriteRenderer;
-    Animator anim;
-    float flip;
-
-    private bool canDash = true;
-    private bool isDashing;
-    private float move = 1f;
-
-    public float maxHP = 100;
-    public float HP;
-    public float moveSpeed = 5f;
-    public float dashSpeed;
-    public float dashTime = 0.2f;
-    public float dashCoolTime = 0.5f;
-
-    static public Vector2 len;
-
-    public Slider hpBar;
-
-    public Rigidbody2D rb;
-    public Camera cam;
-
-    Vector2 movement;
-    Vector2 mousepos;
-
-
-    private void Awake()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        anim=GetComponent<Animator>();
-    }
-    void Start()
-    {
-        rb = this.GetComponent<Rigidbody2D>();
-
-        HP = maxHP;
-    }
-
-    void Update()
-    {
-       movement.x = Input.GetAxisRaw("Horizontal");
-       movement.y = Input.GetAxisRaw("Vertical");
-
-       mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            anim.SetBool("move", true);
-        }
-
-        //체력바
-        hpBar.value = HP / maxHP;
-    }
-
-    */
 }

@@ -5,44 +5,47 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public Slider hpbar;
-    public float maxHp;
-    public float currentHp;
+    public Slider HpBar;
+    public float MaxHp;
+    static public float CurrentHp;
 
     static public int emp = 0;
     int key = 0;
     int coin = 0;
 
 
+    private void Start()
+    {
+        MaxHp = PlayerState.stat[0][PlayerState.statHp];
+        CurrentHp = MaxHp;
+    }
+
     void Update()
     {
-       // hpbar.value = currentHp / maxHp;   
-
+       HpBar.value = CurrentHp / MaxHp;
     }
+
 private void OnTriggerEnter2D(Collider2D collision)
 {
-        //열쇠와 접촉시 열쇠는 사라지고 열쇠 소지갯수 1증가
-        if (collision.gameObject.tag == "Key")
+        //픽업 아이템 획득
+        if (collision.gameObject.tag == "coin")
+        {
+            coin++;
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.tag == "Key")
         {
             key++;
             Destroy(collision.gameObject);
         }
-        //스탯코인과 접촉시 스탯코인은 사라지고 스탯코인 소지갯수 1증가
-        if (collision.gameObject.tag == "StatCoin")
-        {
-            GameManager.StatCoin += 1;
-            Destroy(collision.gameObject);
-        }
-        //emp와 접촉시 emp1개 증가
-        if (collision.gameObject.tag == "emp")
+        else if (collision.gameObject.tag == "emp")
         {
             emp++;
             Destroy(collision.gameObject);
         }
-        //코인먹으면 코인증가 (일반코인)
-        if (collision.gameObject.tag == "coin")
+        else if (collision.gameObject.tag == "StatCoin")
         {
-            coin++;
+            GameManager.StatCoin += 1;
             Destroy(collision.gameObject);
         }
     }
