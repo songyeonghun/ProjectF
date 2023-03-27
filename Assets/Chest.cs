@@ -9,7 +9,12 @@ public class Chest : MonoBehaviour
 
     void Update()
     {
-        
+        if(Input.GetKeyDown(""))
+            if (playerGet == true)
+            {
+                //ÃÑ°ú µ· »ý¼º
+                Destroy(gameObject);
+            }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
