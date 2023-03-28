@@ -7,4 +7,5 @@ public class Weapon : MonoBehaviour
    static public int WeaponCode=1;
 
 
+
 }
