@@ -48,5 +48,10 @@ private void OnTriggerEnter2D(Collider2D collision)
             GameManager.StatCoin += 1;
             Destroy(collision.gameObject);
         }
+        else if(collision.gameObject.tag == "Weapon")
+        {
+           Shooting.Weapon = Weapon.WeaponCode;
+            Destroy(collision.gameObject);
+        }
     }
 }

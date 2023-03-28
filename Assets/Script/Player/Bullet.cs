@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bulllet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     Rigidbody2D rb;
     Vector3 LastVelocity;
     Vector2 move;
+
+   public int damage = 3;
 
 
     private void Start()

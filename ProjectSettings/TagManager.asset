@@ -12,6 +12,7 @@ TagManager:
   - emp
   - enemyBullet
   - coin
+  - Weapon
   layers:
   - Default
   - TransparentFX

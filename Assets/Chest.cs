@@ -7,6 +7,7 @@ public class Chest : MonoBehaviour
     bool playerGet = false;
 
 
+
     void Update()
     {
         if(Input.GetKeyDown(""))
