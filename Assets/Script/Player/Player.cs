@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     static public float CurrentHp;
 
     static public int emp = 0;
-    int key = 0;
+    static public int key = 0;
     int coin = 0;
 
 

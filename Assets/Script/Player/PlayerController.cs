@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         gameObject.layer = 0;
         yield return new WaitForSeconds(DashTime);
         DashSpeed = 2;
-        gameObject.layer = 3;
+        gameObject.layer = 10;
         yield return new WaitForSeconds(dashCoolTime);
         canDash = true;
     }

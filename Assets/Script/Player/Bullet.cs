@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int damage= Shooting.damage[Shooting.Weapon];
+    public int damage;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Start()
+    {
+        damage = Shooting.damage[Shooting.Weapon];
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
     }
