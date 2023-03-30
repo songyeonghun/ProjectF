@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7644587570060721522}
   - component: {fileID: 5517278140588893876}
   - component: {fileID: -109008514557395228}
-  - component: {fileID: -900331878340960247}
+  - component: {fileID: -9063995892158164448}
   m_Layer: 14
   m_Name: Bullet
   m_TagString: Bullet
@@ -117,13 +117,13 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
---- !u!114 &-900331878340960247
+--- !u!114 &-9063995892158164448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5354973741288540284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bc5f44ac3a11994aa8cf4e9affe5982, type: 3}
+  m_Script: {fileID: 11500000, guid: 4731f7396cd6b2148a10472d6b2211b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 3

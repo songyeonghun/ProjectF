@@ -18,11 +18,9 @@ public class Monster : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            //ÃÑ¾Ë¿¡ µû¸¥ µ¥¹ÌÁö·ÎÀÎÇÑ Hp°¨¼î;
-            Bullet BulletDamage = collision.GetComponent<Bullet>();
-            Debug.Log(BulletDamage.damage);
-            //Hp -= BulletDamage.damage;
-            //ºÎµúÈù ÃÑ¾Ë ÆÄ±«
+                Bullet BulletDamage = collision.GetComponent<Bullet>();
+                Hp -= BulletDamage.damage;
+
             Destroy(collision.gameObject);
 
             if (Hp <= 0)
