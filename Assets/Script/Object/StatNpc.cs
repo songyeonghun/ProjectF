@@ -15,7 +15,6 @@ public class StatNpc : MonoBehaviour
         {
             StatUi.SetActive(true);
             Shooting.atkCool = true;
-            Debug.Log("코인 수치 변경 완료");
             Time.timeScale = 0;
 
         }
