@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    Rigidbody2D rb;
-    Vector3 LastVelocity;
-    Vector2 move;
+    public int damage =3 ;
 
-   public int damage = 3;
-
-
-    private void Start()
+    private void Awake()
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * 20;
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

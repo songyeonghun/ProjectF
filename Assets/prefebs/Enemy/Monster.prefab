@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2387100842155849502}
   - component: {fileID: 2387100842155849501}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: EnemyFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,9 +65,9 @@ GameObject:
   - component: {fileID: 2387100843240435205}
   - component: {fileID: 2387100843240435211}
   - component: {fileID: 2387100843240435201}
-  m_Layer: 9
+  m_Layer: 21
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,9 +205,9 @@ GameObject:
   - component: {fileID: 2364729065778994547}
   - component: {fileID: 613524873443810302}
   - component: {fileID: 9046688976968177969}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

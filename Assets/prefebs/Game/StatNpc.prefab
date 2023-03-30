@@ -1386,7 +1386,7 @@ GameObject:
   - component: {fileID: 4284313227646047373}
   - component: {fileID: 4284313227646047372}
   - component: {fileID: 4284313227646047375}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: StatNpc
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-   static public int WeaponCode=1;
+   static public int WeaponCode;
 
-
+    private void Start()
+    {
+        WeaponCode = Random.Range(1, 3);
+    }
 
 }

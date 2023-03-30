@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 5354973741288540284, guid: af48462da91a6e24fb4212dfe8b25a47, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354973741288540284, guid: af48462da91a6e24fb4212dfe8b25a47, type: 3}
+      propertyPath: m_TagString
+      value: enemyBullet
+      objectReference: {fileID: 0}
     - target: {fileID: 6346332756968571435, guid: af48462da91a6e24fb4212dfe8b25a47, type: 3}
       propertyPath: m_RootOrder
       value: 0

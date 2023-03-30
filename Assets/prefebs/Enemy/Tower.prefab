@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6392435485558630706}
   - component: {fileID: 6392435485558630708}
   - component: {fileID: 6392435485558630711}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Tower
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6392435485833257901}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

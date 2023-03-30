@@ -201,9 +201,9 @@ GameObject:
   - component: {fileID: 470019895}
   - component: {fileID: 470019897}
   - component: {fileID: 470019898}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7371,6 +7371,14 @@ PrefabInstance:
     - target: {fileID: 2387100843240435206, guid: 5697be34208ed1c478d1d1e56a5951bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663748861875798850, guid: 5697be34208ed1c478d1d1e56a5951bf, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663748861875798850, guid: 5697be34208ed1c478d1d1e56a5951bf, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5697be34208ed1c478d1d1e56a5951bf, type: 3}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1943884122876641046}
   - component: {fileID: 1943884122876641045}
   - component: {fileID: 1943884122876641047}
-  m_Layer: 11
+  m_Layer: 22
   m_Name: StatCoin
   m_TagString: StatCoin
   m_Icon: {fileID: 0}

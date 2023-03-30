@@ -20,7 +20,8 @@ public class Monster : MonoBehaviour
         {
             //ÃÑ¾Ë¿¡ µû¸¥ µ¥¹ÌÁö·ÎÀÎÇÑ Hp°¨¼î;
             Bullet BulletDamage = collision.GetComponent<Bullet>();
-            Hp -= BulletDamage.damage;
+            Debug.Log(BulletDamage.damage);
+            //Hp -= BulletDamage.damage;
             //ºÎµúÈù ÃÑ¾Ë ÆÄ±«
             Destroy(collision.gameObject);
 

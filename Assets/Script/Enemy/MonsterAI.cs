@@ -40,13 +40,11 @@ public class MonsterAI : MonoBehaviour
             else
                 agent.SetDestination(target.position);      //플레이어를 못찾으면 추적
         }
-
         mousepos = target.position;
     }
 
     private void FixedUpdate()
     {
-        
         Vector2 lookdir = mousepos - rb.position;
         float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
@@ -69,7 +67,6 @@ public class MonsterAI : MonoBehaviour
         {
             PlayerGet = false;      //플레이어 미싱
         }
-
     }
 
     void Shoot()
