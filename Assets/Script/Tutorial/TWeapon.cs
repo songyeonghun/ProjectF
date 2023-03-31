@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class TWeapon : MonoBehaviour
 {
-    static public int WeaponCode;
+    public int WeaponCode;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            Shooting.Weapon = 1;
+            Shooting.Weapon = WeaponCode;
             Destroy(gameObject);
         }
     }
 
     private void Start()
     {
-        WeaponCode = 1;
         Debug.Log(WeaponCode);
     }
 

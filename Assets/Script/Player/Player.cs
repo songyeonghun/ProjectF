@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public Slider HpBar;
-    public float MaxHp;
-    static public float CurrentHp;
+    public int MaxHp;
+    static public int CurrentHp;
+    public Text Hp;
 
     static public int emp = 0;
     static public int key = 0;
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
     void Update()
     {
        HpBar.value = CurrentHp / MaxHp;
+        Hp.text ="Hp: "+CurrentHp;
     }
 
 private void OnTriggerEnter2D(Collider2D collision)
