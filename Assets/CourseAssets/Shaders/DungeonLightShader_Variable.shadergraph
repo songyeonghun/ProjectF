@@ -354,8 +354,6 @@
         "m_GuidSerialized": "132f1739-4801-47d7-be72-ff5207bea263"
     },
     "m_Name": "Mask",
-    "m_DefaultRefNameVersion": 0,
-    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_2E0B9C5D",
     "m_OverrideReferenceName": "_MaskTex",
     "m_GeneratePropertyBlock": true,
@@ -784,7 +782,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": false,
+    "m_PreviewExpanded": true,
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
@@ -1234,8 +1232,6 @@
         "m_GuidSerialized": "54208c3e-742d-47c5-b00c-12ac908d5e6d"
     },
     "m_Name": "MainTex",
-    "m_DefaultRefNameVersion": 0,
-    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_3AA17D53",
     "m_OverrideReferenceName": "_MainTex",
     "m_GeneratePropertyBlock": true,
@@ -1276,8 +1272,6 @@
         "m_GuidSerialized": "9ec4c44d-c9be-4053-a660-f92323ab5f39"
     },
     "m_Name": "Normal",
-    "m_DefaultRefNameVersion": 0,
-    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_F6713237",
     "m_OverrideReferenceName": "_NormalMap",
     "m_GeneratePropertyBlock": true,
@@ -1361,8 +1355,6 @@
         "m_GuidSerialized": "af30b8f7-55c2-4f9f-a5bc-2b377e9dd288"
     },
     "m_Name": "Alpha",
-    "m_DefaultRefNameVersion": 0,
-    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_BB556DFA",
     "m_OverrideReferenceName": "Alpha_Slider",
     "m_GeneratePropertyBlock": true,
@@ -1587,7 +1579,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": false,
+    "m_PreviewExpanded": true,
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []

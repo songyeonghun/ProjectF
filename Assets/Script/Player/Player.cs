@@ -47,7 +47,7 @@ private void OnTriggerEnter2D(Collider2D collision)
         }
         else if (collision.gameObject.tag == "StatCoin")
         {
-            GameManager2.StatCoin += 1;
+            GameManager.StatCoin += 1;
             Destroy(collision.gameObject);
         }
         else if(collision.gameObject.tag == "Weapon")

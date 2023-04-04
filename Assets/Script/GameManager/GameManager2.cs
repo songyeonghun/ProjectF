@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class GameManager : SingletonMonobehaviour<GameManager>
+public class GameManager2 : SingletonMonobehaviour<GameManager2>
 {
     #region Header DUNGEON LEVELS
 
