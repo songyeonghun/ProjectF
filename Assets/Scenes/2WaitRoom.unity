@@ -28378,6 +28378,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 450997537, guid: 9c02a8b403494ce42ae27026309df191, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1621059653, guid: 9c02a8b403494ce42ae27026309df191, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -28627,9 +28631,10 @@ GameObject:
   - component: {fileID: 1359520360}
   - component: {fileID: 1359520362}
   - component: {fileID: 1359520361}
-  m_Layer: 0
+  - component: {fileID: 1359520363}
+  m_Layer: 13
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44767,6 +44772,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1359520363
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359520359}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &1560111543
 GameObject:
   m_ObjectHideFlags: 0
@@ -45396,6 +45417,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 992424229600228611, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2436889467177623515, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
       propertyPath: m_Text
       value: StatCoin
@@ -45430,7 +45455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284313226903611065, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4284313226903611070, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
       propertyPath: StatCoin
@@ -45454,11 +45479,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284313227088140627, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -636
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4284313227088140627, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -383
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 4284313227114664884, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
       propertyPath: m_Layer
@@ -45482,6 +45507,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284313227646047371, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284313227646047373, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284313227646047373, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284313227646047373, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
+      propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4284313227646047374, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
@@ -45534,11 +45571,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284313227825691986, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -636
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4284313227825691986, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -122
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4284313227915393060, guid: 36fc6cacf88f00c4eaf9d7e64c14fa08, type: 3}
       propertyPath: m_Layer

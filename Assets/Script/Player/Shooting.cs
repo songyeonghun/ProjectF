@@ -43,7 +43,7 @@ public class Shooting : MonoBehaviour
         //¿Â¿¸
         if (Input.GetKeyDown("r"))
         {
-            Reload();
+            Invoke("Reload",1);
         }
     }
 
