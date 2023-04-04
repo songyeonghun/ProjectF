@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public Slider HpBar;
-    public int MaxHp;
+    public Image HpBar;
+    int MaxHp;
     static public int CurrentHp;
     public Text Hp;
 
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-       HpBar.value = CurrentHp / MaxHp;
+       HpBar.fillAmount = (float)CurrentHp / MaxHp;
         Hp.text ="Hp: "+CurrentHp;
     }
 
