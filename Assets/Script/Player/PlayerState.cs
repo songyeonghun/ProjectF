@@ -49,17 +49,17 @@ public class PlayerState : MonoBehaviour
         MoveSpeedText.text = "Level: " + statMoveSpeed + "\nMoveSpeed: " + stat[2][statMoveSpeed];
         AtkSpeedText.text = "Level: " + statAtkSpeed + "\nAtkSpeed: " + stat[3][statAtkSpeed];
         HPRegenText.text = "Level: " + StatHpRegen + "\nHpRegen: " + stat[4][StatHpRegen] + "%";
-        StatCoinText.text = GameManager.StatCoin + "Coin";
+        StatCoinText.text = GameManager2.StatCoin + "Coin";
     }
 
 
     //스탯업
     public void HpUp()
     {
-        if (statHp < 10 && GameManager.StatCoin >= useCoin[statHp])
+        if (statHp < 10 && GameManager2.StatCoin >= useCoin[statHp])
         {
-            GameManager.StatCoin -= useCoin[statHp];                                //코인 소모
-            StatCoinText.text = GameManager.StatCoin + "Coin";                      //남은 코인 택스트 변경
+            GameManager2.StatCoin -= useCoin[statHp];                                //코인 소모
+            StatCoinText.text = GameManager2.StatCoin + "Coin";                      //남은 코인 택스트 변경
             statHp++;                                                               //해당 스탯 레벨업
             HPText.text = "Level: " + statHp + "\nHP: " + stat[0][statHp];          //해당 스탯 수치 택스트 변경
             PlayerPrefs.SetInt("statHp", statHp);                                   //스탯 레벨 저장
@@ -69,10 +69,10 @@ public class PlayerState : MonoBehaviour
     }
     public void AtkUp()
     {
-        if (statAtk < 10 && GameManager.StatCoin >= useCoin[statAtk])
+        if (statAtk < 10 && GameManager2.StatCoin >= useCoin[statAtk])
         {
-            GameManager.StatCoin -= useCoin[statAtk];                                //코인 소모
-            StatCoinText.text = GameManager.StatCoin + "Coin";                      //남은 코인 택스트 변경
+            GameManager2.StatCoin -= useCoin[statAtk];                                //코인 소모
+            StatCoinText.text = GameManager2.StatCoin + "Coin";                      //남은 코인 택스트 변경
             statAtk+=2;
             AtkText.text = "Level: " + statAtk/2 + "\nATK: " + stat[1][statAtk];
             PlayerPrefs.SetInt("statAtk", statAtk);
@@ -81,10 +81,10 @@ public class PlayerState : MonoBehaviour
     }
     public void MoveSpeedUp()
     {
-        if (statMoveSpeed < 5 && GameManager.StatCoin >= useCoin[statMoveSpeed])
+        if (statMoveSpeed < 5 && GameManager2.StatCoin >= useCoin[statMoveSpeed])
         {
-            GameManager.StatCoin -= useCoin[statMoveSpeed];                                //코인 소모
-            StatCoinText.text = GameManager.StatCoin + "Coin";                      //남은 코인 택스트 변경
+            GameManager2.StatCoin -= useCoin[statMoveSpeed];                                //코인 소모
+            StatCoinText.text = GameManager2.StatCoin + "Coin";                      //남은 코인 택스트 변경
             statMoveSpeed++;
             MoveSpeedText.text = "Level: " + statMoveSpeed + "\nMoveSpeed: " + stat[2][statMoveSpeed];
             PlayerPrefs.SetInt("statMoveSpeed", statMoveSpeed);
@@ -93,10 +93,10 @@ public class PlayerState : MonoBehaviour
     }
     public void AtkSpeedUp()
     {
-        if (statAtkSpeed < 10 && GameManager.StatCoin >= useCoin[statAtkSpeed])
+        if (statAtkSpeed < 10 && GameManager2.StatCoin >= useCoin[statAtkSpeed])
         {
-            GameManager.StatCoin -= useCoin[statAtkSpeed];                                //코인 소모
-            StatCoinText.text = GameManager.StatCoin + "Coin";                      //남은 코인 택스트 변경
+            GameManager2.StatCoin -= useCoin[statAtkSpeed];                                //코인 소모
+            StatCoinText.text = GameManager2.StatCoin + "Coin";                      //남은 코인 택스트 변경
             statAtkSpeed+=2;
             AtkSpeedText.text = "Level: " + statAtkSpeed/2 + "\nAtkSpeed: " + stat[3][statAtkSpeed];
             PlayerPrefs.SetInt("statAtkSpeed", statAtkSpeed);
@@ -107,10 +107,10 @@ public class PlayerState : MonoBehaviour
 
     public void HpRegenUp()
     {
-        if (StatHpRegen < 10 && GameManager.StatCoin >= useCoin[StatHpRegen])
+        if (StatHpRegen < 10 && GameManager2.StatCoin >= useCoin[StatHpRegen])
         {
-            GameManager.StatCoin -= useCoin[StatHpRegen];                                //코인 소모
-            StatCoinText.text = GameManager.StatCoin + "Coin";                      //남은 코인 택스트 변경
+            GameManager2.StatCoin -= useCoin[StatHpRegen];                                //코인 소모
+            StatCoinText.text = GameManager2.StatCoin + "Coin";                      //남은 코인 택스트 변경
             StatHpRegen+=2;
             HPRegenText.text = "Level: " + StatHpRegen/2 + "\nHpRegen: " + stat[4][StatHpRegen] + "%";
             PlayerPrefs.SetInt("StatHpRegen", StatHpRegen);
