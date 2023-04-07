@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public Rigidbody2D wprb;
 
     //emp
     public GameObject emp;
@@ -18,18 +19,11 @@ public class PlayerController : MonoBehaviour
     float DashTime=0.2f;
     float dashCoolTime = 0.5f;
 
-    //마우스
-    public Camera cam;
-    static public Vector2 len;
     Vector2 movement;
-    Vector2 mousepos;
+
 
     void Update()
     {
-        //플레이어 회전을 위한 마우스 좌표값 
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
 
         //마우스 우클릭시 대쉬
         if (Input.GetMouseButtonDown(1)&& canDash==true)
@@ -42,25 +36,24 @@ public class PlayerController : MonoBehaviour
             Player.emp--;
         }
 
+        //이동
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
     }
     void FixedUpdate()
     {
         //rb를 이용한 물리적 플레이어 이동
-        rb.MovePosition(rb.position + movement * (MoveSpeed/DashSpeed) * Time.fixedDeltaTime);
-
-        //마우스 위치에 따른 플레이어 회전
-        Vector2 lookdir = mousepos - rb.position;
-        float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
+        rb.MovePosition(rb.position + movement * (MoveSpeed / DashSpeed) * Time.fixedDeltaTime);
+        wprb.MovePosition(wprb.position + movement * (MoveSpeed / DashSpeed) * Time.fixedDeltaTime);
     }
 
-    //대쉬와 쿨타임
-    private IEnumerator Dash()
+        //대쉬와 쿨타임
+        private IEnumerator Dash()
     {
-        Debug.Log("dash");
         canDash = false;
         DashSpeed = 1;
-        //대쉬시 무적코드 넣을자리
+        //대쉬시 무적
         gameObject.layer = 0;
         yield return new WaitForSeconds(DashTime);
         DashSpeed = 2;

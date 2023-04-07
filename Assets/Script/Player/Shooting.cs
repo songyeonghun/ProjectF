@@ -17,9 +17,8 @@ public class Shooting : MonoBehaviour
     int[] UseHp = { 0, 3, 7, 3 };                                             //발사시 채력소모값
     float[] AtkCool = { 0,0.5f,1f,0.2f};                                      //공속
     static public bool atkCool = false;                     //공속및 딜레이 관련
-
-    int[] ammo = { 0, 0, 0, 0 };
-    float[] UseHpCount= {0 ,0 ,0 ,0 };
+    int[] ammo = { 0, 0, 0, 0 };                                //사용한 총알
+    float[] UseHpCount= {0 ,0 ,0 ,0 };                          //사용한 체력
 
     //총알 나가는 위치, 총알 프리팹
     public Transform firepoint;
@@ -28,8 +27,17 @@ public class Shooting : MonoBehaviour
     //탄속
     float bulletForce = 20f;
 
+    //마우스
+    public Rigidbody2D rb;
+    public Camera cam;
+    static public Vector2 len;
+    Vector2 mousepos;
+
+    public GameObject player;
+
     private void Start()
     {
+
         Regen= PlayerPrefs.GetInt("StatHpRegen");
     }
     void Update()
@@ -45,6 +53,21 @@ public class Shooting : MonoBehaviour
         {
             Invoke("Reload",1);
         }
+
+        if(mousepos.x<player.transform.position.x)
+        {
+            //무기위치이동
+        }
+
+        //무기 회전을 위한 마우스 좌표값 
+        mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
+    }
+    void FixedUpdate()
+    {
+        //마우스 위치에 따른 플레이어 회전
+        Vector2 lookdir = mousepos - rb.position;
+        float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;
     }
 
     void Shoot()
@@ -81,8 +104,6 @@ public class Shooting : MonoBehaviour
     void Reload() 
     {
         ammo[Weapon] = 0;
-        Debug.Log(HpRegen[Regen]);
-        Debug.Log(UseHpCount[Weapon]);
         Player.CurrentHp += (int)(UseHpCount[Weapon] * HpRegen[Regen] * 0.01f);
         UseHpCount[Weapon] = 0;
     }
