@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: 604285f4692aa9141bd2a63c257a6751
+guid: 0c70bfc68e19eaf4cad754b7e5cc4b04
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 233406985830447773
-    second: HealthBar_Red_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -92,28 +89,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: HealthBar_Red_0
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 71
-        width: 84
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9ab48eba6a3d3300800000000000000
-      internalID: 233406985830447773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

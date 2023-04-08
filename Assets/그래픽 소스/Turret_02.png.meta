@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db39eade67adce54bbb6bc2b6de34e27
+guid: 71e3cf45373415c4fa9bfb7c1d36fd65
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -97,10 +97,10 @@ TextureImporter:
       name: Turret_02_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 43
-        width: 64
-        height: 42
+        x: 43
+        y: 46
+        width: 42
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

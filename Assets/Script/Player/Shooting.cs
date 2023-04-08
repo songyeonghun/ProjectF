@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Shooting : MonoBehaviour
     int Regen;
 
     //무기종류를 판단하는 변수
-    static public int Weapon = 2;     //0없음, 1권총, 2샷건, 3기관총
+    static public int Weapon = 0;     //0없음, 1권총, 2샷건, 3기관총
 
     //무기별 스테이터스
     static public int[] damage = { 0, 3, 3, 3 };                                   //공격력
@@ -27,13 +28,17 @@ public class Shooting : MonoBehaviour
     //탄속
     float bulletForce = 20f;
 
-    //마우스
+    //마우스 때문에 필요한것들
     public Rigidbody2D rb;
     public Camera cam;
     static public Vector2 len;
     Vector2 mousepos;
 
+    //총 위치 때문에 필요한것들
     public GameObject player;
+
+    //탄환
+    public Text Ammo;
 
     private void Start()
     {
@@ -48,13 +53,17 @@ public class Shooting : MonoBehaviour
             Shoot();
             Player.CurrentHp -= UseHp[Weapon];
         }
+        
         //장전
         if (Input.GetKeyDown("r"))
         {
             Invoke("Reload",1);
         }
 
-        if(mousepos.x<player.transform.position.x)
+        //탄환수 나오는거
+        Ammo.text = ""+(Maxammo[Weapon]-ammo[Weapon])+" / "+Maxammo[Weapon];
+
+        if (mousepos.x<player.transform.position.x)
         {
             //무기위치이동
         }
