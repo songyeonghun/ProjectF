@@ -9,6 +9,10 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(PortalName== "3TutorialStage")
+        {
+            collision.transform.position = new Vector2(-17.5f,- 32.5f);
+        }
         if (collision.gameObject.tag=="Player")
         {
             SceneManager.LoadScene(PortalName);

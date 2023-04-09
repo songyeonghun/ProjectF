@@ -14,10 +14,4 @@ public class TWeapon : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void Start()
-    {
-        Debug.Log(WeaponCode);
-    }
-
 }
