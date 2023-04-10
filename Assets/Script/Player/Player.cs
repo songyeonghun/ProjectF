@@ -14,10 +14,19 @@ public class Player : MonoBehaviour
     static public int key = 0;
     int coin = 0;
 
+    //스탯표
+    static public int[][] stat = new int[5][]
+    {
+        new int[]{ 300,320,340,360,380,400,420,440,460,480,500},    //0 채력
+        new int[]{ 0,0,2,0,4,0,6,0,8,0,10},                                 //1 공격력
+        new int[]{ 10,11,12,13,14,15},                                    //2 이동속도
+        new int[]{ 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 15},                //3 공격속도
+        new int[]{ 50, 0, 55, 0, 60, 0, 65, 0, 70, 0, 80}                 //5 채력회복
+    };
 
     private void Start()
     {
-        MaxHp = PlayerState.stat[0][PlayerState.statHp];
+        MaxHp = stat[0][PlayerPrefs.GetInt("statHp")];
         CurrentHp = MaxHp;
     }
 

@@ -7,7 +7,7 @@ public class MonsterAI : MonoBehaviour
 {
     public GameObject bulletPrefab;          //총 발사시 생성될 탄환
     public Transform firepoint;                 //총알이 발사될 위치
-    public Transform target;                    //추적할 상대
+    GameObject target;                    //추적할 상대
     NavMeshAgent agent;                       //추적을 하는대상(나)
     Vector2 mousepos;
 
@@ -24,6 +24,7 @@ public class MonsterAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        target = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
@@ -38,9 +39,9 @@ public class MonsterAI : MonoBehaviour
                 Invoke("Shoot", atkCool);
             }
             else
-                agent.SetDestination(target.position);      //플레이어를 못찾으면 추적
+                agent.SetDestination(target.transform.position);      //플레이어를 못찾으면 추적
         }
-        mousepos = target.position;
+        mousepos = target.transform.position;
     }
 
     private void FixedUpdate()

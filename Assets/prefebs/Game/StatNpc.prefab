@@ -1009,7 +1009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4284313226903611069
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1113,12 +1113,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3451ed02e7e4fc04cbc43266b1336db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HPText: {fileID: 0}
-  AtkText: {fileID: 0}
-  MoveSpeedText: {fileID: 0}
-  AtkSpeedText: {fileID: 0}
-  HPRegenText: {fileID: 0}
   StatCoinText: {fileID: 2436889467177623515}
+  needStatCoin:
+  - {fileID: 4709869055873470861}
+  - {fileID: 4109240131821412383}
+  - {fileID: 812001234302924945}
+  - {fileID: 6030879882155217469}
+  - {fileID: 7389245276379794864}
+  statNum: 0
 --- !u!1 &4284313226913644261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,15 +1756,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -6083234708928302191, guid: 8f7a60065e3984c489b9c4d41bc3dc4e, type: 3}
+  m_Sprite: {fileID: 497468721929452521, guid: 39a8e0a75f28f844eb94c13ace4d7e2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1.1111112}
+  m_Size: {x: 0.92, y: 0.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &4284313227646047372

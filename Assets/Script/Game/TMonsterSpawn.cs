@@ -10,6 +10,7 @@ public class TMonsterSpawn : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Instantiate(Monster, Spawn.position, Spawn.rotation);
+        Destroy(gameObject);
     }
 
 

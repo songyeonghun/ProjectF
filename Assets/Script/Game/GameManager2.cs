@@ -11,5 +11,9 @@ public class GameManager2 : MonoBehaviour
         PlayerPrefs.SetInt("StatCoin", StatCoin);
     }
 
+    static public void SaveCoin()
+    {
+        PlayerPrefs.SetInt("StatCoin", StatCoin);
+    }
 
 }

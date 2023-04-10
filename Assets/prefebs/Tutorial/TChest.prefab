@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654307fb03a02d84caf05465c167485e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  open: {fileID: -2817884228449214865, guid: c03753e08d0822c44a8a7d78f7ab46b0, type: 3}
   spawnPoint: {fileID: 2076329664284981494}
   itemPrefab: {fileID: 8058065882407491572, guid: af182665e7ad84c4a96be7733f439b33, type: 3}
 --- !u!58 &2076329665608924751
