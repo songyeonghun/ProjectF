@@ -6,13 +6,16 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public Image HpBar;
-    int MaxHp;
+    static public int MaxHp;
     static public int CurrentHp;
     public Text Hp;
+    public Text Key;
+    public Text Emp;
+    public Text Coin;
 
     static public int emp = 0;
     static public int key = 0;
-    int coin = 0;
+    static public int coin = 0;
 
     //Ω∫≈»«•
     static public int[][] stat = new int[5][]
@@ -34,6 +37,9 @@ public class Player : MonoBehaviour
     {
        HpBar.fillAmount = (float)CurrentHp / MaxHp;
         Hp.text ="Hp: "+CurrentHp;
+        Key.text = "" + key;
+        Emp.text = "" + emp;
+        Coin.text = "" + coin;
     }
 
 private void OnTriggerEnter2D(Collider2D collision)

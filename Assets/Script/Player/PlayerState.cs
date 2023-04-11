@@ -52,10 +52,12 @@ public class PlayerState : MonoBehaviour
     {
         if (statHp < 10 && GameManager2.StatCoin >= useCoin[statHp])
         {
-            UseCoin();
+            UseCoin(statHp);
             statHp++;                                                               //해당 스탯 레벨업
             PlayerPrefs.SetInt("statHp", statHp);                                   //스탯 레벨 저장
             needStatCoin[0].text = "" + useCoin[statHp];
+            Player.MaxHp = stat[0][statHp];
+            Player.CurrentHp = Player.MaxHp;
 
         }
         Debug.Log(statHp);
@@ -64,7 +66,7 @@ public class PlayerState : MonoBehaviour
     {
         if (statAtk < 10 && GameManager2.StatCoin >= useCoin[statAtk])
         {
-            UseCoin();
+            UseCoin(statAtk);
             statAtk +=2;
             PlayerPrefs.SetInt("statAtk", statAtk);
             needStatCoin[1].text = "" + useCoin[statAtk];
@@ -75,7 +77,7 @@ public class PlayerState : MonoBehaviour
     {
         if (statAtkSpeed < 10 && GameManager2.StatCoin >= useCoin[statAtkSpeed])
         {
-            UseCoin();
+            UseCoin(statAtkSpeed);
             statAtkSpeed += 2;
             PlayerPrefs.SetInt("statAtkSpeed", statAtkSpeed);
             needStatCoin[2].text = "" + useCoin[statAtkSpeed];
@@ -87,7 +89,7 @@ public class PlayerState : MonoBehaviour
     {
         if (statMoveSpeed < 5 && GameManager2.StatCoin >= useCoin[statMoveSpeed])
         {
-            UseCoin();
+            UseCoin(statMoveSpeed);
             statMoveSpeed++;
             PlayerPrefs.SetInt("statMoveSpeed", statMoveSpeed);
             needStatCoin[3].text = "" + useCoin[statMoveSpeed];
@@ -99,7 +101,7 @@ public class PlayerState : MonoBehaviour
     {
         if (StatHpRegen < 10 && GameManager2.StatCoin >= useCoin[StatHpRegen])
         {
-            UseCoin();
+            UseCoin(StatHpRegen);
             StatHpRegen +=2;
             PlayerPrefs.SetInt("StatHpRegen", StatHpRegen);
             needStatCoin[4].text = "" + useCoin[StatHpRegen];
@@ -109,9 +111,9 @@ public class PlayerState : MonoBehaviour
     }
 
 
-    void UseCoin()
+    void UseCoin(int A)
     {
-        GameManager2.StatCoin -= useCoin[StatHpRegen];                                //코인 소모
+        GameManager2.StatCoin -= useCoin[A];                                //코인 소모
         GameManager2.SaveCoin();                                                    //소모된 코인을 저장
         StatCoinText.text = GameManager2.StatCoin + "Coin";                      //남은 코인 택스트 변경
     }

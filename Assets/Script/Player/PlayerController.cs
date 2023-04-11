@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    Animator anim;
     public Rigidbody2D rb;
     public Rigidbody2D wprb;
 
@@ -16,11 +17,16 @@ public class PlayerController : MonoBehaviour
     //´ë½¬
     bool canDash = true;
     int DashSpeed = 2;
-    float DashTime=0.2f;
+    float DashTime=0.3f;
     float dashCoolTime = 0.5f;
 
     Vector2 movement;
 
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -40,6 +46,34 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            anim.SetBool("Right", true);
+            anim.SetBool("Left", false);
+            anim.SetBool("Front", false);
+            anim.SetBool("Back", false);
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            anim.SetBool("Right", false);
+            anim.SetBool("Left", true);
+            anim.SetBool("Front", false);
+            anim.SetBool("Back", false);
+        }
+        else if (Input.GetAxisRaw("Vertical") > 0)
+        {
+            anim.SetBool("Right", false);
+            anim.SetBool("Left", false);
+            anim.SetBool("Front", false);
+            anim.SetBool("Back", true);
+        }
+        else
+        {
+            anim.SetBool("Right", false);
+            anim.SetBool("Left", false);
+            anim.SetBool("Front", true);
+            anim.SetBool("Back", false);
+        }
     }
     void FixedUpdate()
     {
