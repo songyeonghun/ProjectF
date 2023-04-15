@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
@@ -9,7 +10,12 @@ public class Shooting : MonoBehaviour
     int Regen;
 
     //무기종류를 판단하는 변수
-    static public int Weapon = 2;     //0없음, 1권총, 2샷건, 3기관총
+    static public int Weapon = 0;     //0없음, 1권총, 2샷건, 3기관총
+    //획득한 무기 판별 변수
+
+    //무기 위치
+   public Transform Right;
+   public Transform Left;
 
     //무기별 스테이터스
     static public int[] damage = { 0, 3, 3, 3 };                                   //공격력
@@ -19,21 +25,27 @@ public class Shooting : MonoBehaviour
     static public bool atkCool = false;                     //공속및 딜레이 관련
     int[] ammo = { 0, 0, 0, 0 };                                //사용한 총알
     float[] UseHpCount= {0 ,0 ,0 ,0 };                          //사용한 체력
+    
+    //탄속
+    float bulletForce = 20f;
 
     //총알 나가는 위치, 총알 프리팹
     public Transform firepoint;
     public GameObject bulletPrefab;
 
-    //탄속
-    float bulletForce = 20f;
 
-    //마우스
+
+    //마우스 때문에 필요한것들
     public Rigidbody2D rb;
     public Camera cam;
     static public Vector2 len;
     Vector2 mousepos;
 
+    //총 위치 때문에 필요한것들
     public GameObject player;
+
+    //탄환
+    public Text Ammo;
 
     private void Start()
     {
@@ -48,15 +60,25 @@ public class Shooting : MonoBehaviour
             Shoot();
             Player.CurrentHp -= UseHp[Weapon];
         }
+        
         //장전
         if (Input.GetKeyDown("r"))
         {
             Invoke("Reload",1);
         }
 
-        if(mousepos.x<player.transform.position.x)
+        //탄환수 나오는거
+        Ammo.text = ""+(Maxammo[Weapon]-ammo[Weapon])+" / "+Maxammo[Weapon];
+
+        if (mousepos.x<player.transform.position.x)
         {
-            //무기위치이동
+            gameObject.transform.position = Right.position;
+            gameObject.transform.localScale=new Vector3(0.3f, -0.13f, 0);
+        }
+        else
+        {
+            gameObject.transform.position = Left.position;
+            gameObject.transform.localScale = new Vector3(0.3f, 0.13f, 0);
         }
 
         //무기 회전을 위한 마우스 좌표값 

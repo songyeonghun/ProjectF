@@ -5,6 +5,7 @@ using UnityEngine;
 public class Chest : MonoBehaviour
 {
     bool playerGet = false;
+    public Sprite open;
 
     public Transform spawnPoint;
     public GameObject itemPrefab;
@@ -18,7 +19,7 @@ public class Chest : MonoBehaviour
                 GameObject bullet = Instantiate(itemPrefab, spawnPoint.position, spawnPoint.rotation);
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                 Player.key--;
-                Destroy(gameObject);
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = open;
             }
     }
 
