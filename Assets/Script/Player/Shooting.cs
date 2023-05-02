@@ -70,6 +70,7 @@ public class Shooting : MonoBehaviour
         //탄환수 나오는거
         Ammo.text = ""+(Maxammo[Weapon]-ammo[Weapon])+" / "+Maxammo[Weapon];
 
+        //마우스위치에 따른 손에서의 무기 위치
         if (mousepos.x<player.transform.position.x)
         {
             gameObject.transform.position = Right.position;
@@ -90,6 +91,11 @@ public class Shooting : MonoBehaviour
         Vector2 lookdir = mousepos - rb.position;
         float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
+
+        if (angle >= 22f && angle <= 67f) //Up Right
+        {
+            
+        }
     }
 
     void Shoot()
