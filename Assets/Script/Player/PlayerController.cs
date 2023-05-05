@@ -48,31 +48,25 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
+            anim.SetBool("Move", true);
             anim.SetBool("Right", true);
-            anim.SetBool("Left", false);
-            anim.SetBool("Front", false);
-            anim.SetBool("Back", false);
+
         }
         else if (Input.GetAxisRaw("Horizontal") < 0)
         {
-            anim.SetBool("Right", false);
-            anim.SetBool("Left", true);
-            anim.SetBool("Front", false);
-            anim.SetBool("Back", false);
+            anim.SetBool("Move", true);
+            anim.SetBool("Right", true);
         }
         else if (Input.GetAxisRaw("Vertical") > 0)
         {
-            anim.SetBool("Right", false);
-            anim.SetBool("Left", false);
-            anim.SetBool("Front", false);
+            anim.SetBool("Move", true);
             anim.SetBool("Back", true);
         }
         else
         {
-            anim.SetBool("Right", false);
-            anim.SetBool("Left", false);
-            anim.SetBool("Front", true);
-            anim.SetBool("Back", false);
+            anim.SetBool("Move", true);
+            anim.SetBool("Down", true);
+
         }
     }
     void FixedUpdate()
