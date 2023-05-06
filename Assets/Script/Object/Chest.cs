@@ -12,13 +12,13 @@ public class Chest : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown("e") && Player.key > 0)
+        if(Input.GetKeyDown("e") && Player.HaveKey > 0)
             if (playerGet == true)
             {
                 //ÃÑ»ý¼º
                 GameObject bullet = Instantiate(itemPrefab, spawnPoint.position, spawnPoint.rotation);
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-                Player.key--;
+                Player.HaveKey--;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = open;
             }
     }

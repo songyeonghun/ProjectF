@@ -92,9 +92,23 @@ public class Shooting : MonoBehaviour
         float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
 
-        if (angle >= 22f && angle <= 67f) //Up Right
+        if (angle>=-135&&angle<=-45) //Up Right
         {
-            
+            Player.anim.SetBool("Down", true);
+            Player.anim.SetBool("Back", false);
+            Player.anim.SetBool("Right", false);
+        }
+        else if (angle >= 67 && angle <= 112)
+        {
+            Player.anim.SetBool("Down", false);
+            Player.anim.SetBool("Back", true);
+            Player.anim.SetBool("Right", false);
+        }
+        else
+        {
+            Player.anim.SetBool("Down", false);
+            Player.anim.SetBool("Back", false);
+            Player.anim.SetBool("Right", true);
         }
     }
 

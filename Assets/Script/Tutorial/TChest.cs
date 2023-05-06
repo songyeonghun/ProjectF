@@ -11,13 +11,13 @@ public class TChest : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("e")&&Player.key>0)
+        if (Input.GetKeyDown("e")&&Player.HaveKey>0)
             if (playerGet == true)
             {
                 //ÃÑ°ú µ· »ý¼º
                 GameObject bullet = Instantiate(itemPrefab, spawnPoint.position, spawnPoint.rotation);
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-                Player.key--;
+                Player.HaveKey--;
                 Destroy(gameObject);
             }
     }

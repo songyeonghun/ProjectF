@@ -4,36 +4,28 @@ using UnityEngine;
 
 public class ShopUI : MonoBehaviour
 {
-
-
-
-
-
     public void buyEmp()
     {
-        if (Player.coin > 10)
+        if (Player.HaveCoin > 10)
         {
-            Player.coin -= 10;
-            Player.emp++;
+            Player.HaveCoin -= 10;
+            Player.HaveEmp++;
         }
     }
     public void buyKey()
     {
-        if (Player.coin > 10)
+        if (Player.HaveCoin > 10)
         {
-            Player.coin -= 10;
-            Player.key++;
-        }
+            Player.HaveCoin -= 10;
+            Player.HaveKey++;
+        }   
     }
     public void buyRifle()
     {
-        if (Player.coin > 50)
+        if (Player.HaveCoin > 50)
         {
-            Player.coin-=50;
+            Player.HaveCoin -= 50;
             Shooting.Weapon = 3;
         }
     }
-
-
-
 }
