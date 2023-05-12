@@ -11,7 +11,9 @@ public class Shooting : MonoBehaviour
 
     //무기종류를 판단하는 변수
     static public int Weapon = 0;     //0없음, 1권총, 2샷건, 3기관총
-    //획득한 무기 판별 변수
+
+    //플레이어 오프젝트
+    public SpriteRenderer PlayerRend;
 
     //무기 위치
    public Transform Right;
@@ -74,12 +76,12 @@ public class Shooting : MonoBehaviour
         if (mousepos.x<player.transform.position.x)
         {
             gameObject.transform.position = Right.position;
-            gameObject.transform.localScale=new Vector3(0.3f, -0.13f, 0);
+            gameObject.transform.localScale=new Vector3(1.5f, -0.6f, 0);
         }
         else
         {
             gameObject.transform.position = Left.position;
-            gameObject.transform.localScale = new Vector3(0.3f, 0.13f, 0);
+            gameObject.transform.localScale = new Vector3(1.5f, 0.6f, 0);
         }
 
         //무기 회전을 위한 마우스 좌표값 
@@ -103,6 +105,14 @@ public class Shooting : MonoBehaviour
             Player.anim.SetBool("Down", false);
             Player.anim.SetBool("Back", true);
             Player.anim.SetBool("Right", false);
+        }
+        else if (angle >= 158 || angle <= -135)
+        {
+            Player.anim.SetBool("Down", false);
+            Player.anim.SetBool("Back", false);
+            Player.anim.SetBool("Right", true);
+            PlayerRend.flipX = false;
+
         }
         else
         {

@@ -13,11 +13,12 @@ public class Player : MonoBehaviour
 
     float moveSpeed;
 
-    public GameObject HealGauge;
+    public Image HealGauge;
+    public GameObject HealGaugeMax;
     float time = 0;
     //대쉬
     bool canDash = true;
-    float dashTime = 0.3f;
+    float dashTime = 0.6f;
 
     public Image HpBar;
     static public int MaxHp;
@@ -77,21 +78,22 @@ public class Player : MonoBehaviour
         {
             Heal();
         }
-        Debug.Log(Input.GetAxisRaw("Horizontal"));
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift)&HaveCoin>=10)
         {
-            HealGauge.gameObject.SetActive(true);
+            HealGaugeMax.SetActive(true);
+        }else if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            HealGaugeMax.SetActive(false);
+            time = 0;
         }
 
-        //애니메이션
-        if (canDash == false)
-        {
-            if (Input.GetAxisRaw("Horizontal") > 0.3f || Input.GetAxisRaw("Horizontal") < -0.3f)
+            //애니메이션
+            if (Input.GetAxisRaw("Horizontal") > 0.6f || Input.GetAxisRaw("Horizontal") < -0.6f)
             {
                 anim.SetBool("Move", true);
                 anim.SetBool("Idle", false);
             }
-            else if (Input.GetAxisRaw("Vertical") > 0.3f || Input.GetAxisRaw("Vertical") < -0.3f)
+            else if (Input.GetAxisRaw("Vertical") > 0.6f || Input.GetAxisRaw("Vertical") < -0.6f)
             {
                 anim.SetBool("Move", true);
                 anim.SetBool("Idle", false);
@@ -101,7 +103,6 @@ public class Player : MonoBehaviour
                 anim.SetBool("Idle", true);
                 anim.SetBool("Move", false);
             }
-        }
     }
 
     void FixedUpdate()
@@ -116,8 +117,8 @@ public class Player : MonoBehaviour
         canDash = false;
         gameObject.layer = 0;
         moveSpeed = moveSpeed * 1.5f;
-        anim.SetBool("Move", false);
         anim.SetBool("Roll", true);
+        anim.SetBool("Move", false);
         yield return new WaitForSeconds(dashTime);
         anim.SetBool("Roll", false);
         canDash = true;
@@ -130,6 +131,7 @@ public class Player : MonoBehaviour
     void Heal()
     {
         time += Time.deltaTime;
+        HealGauge.fillAmount = time / 2;
         if (time >= 2 && HaveCoin > 10)
         {
             CurrentHp += 10;
