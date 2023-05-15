@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
     int Regen;
 
     //무기종류를 판단하는 변수
-    static public int Weapon = 0;     //0없음, 1권총, 2샷건, 3기관총
+    static public int Weapon = 0;     //0없음, 1권총, 2기관총, 샷건 
 
     //플레이어 오프젝트
     public SpriteRenderer PlayerRend;
@@ -124,7 +124,7 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        if (Weapon == 1|| Weapon == 3)
+        if (Weapon == 1|| Weapon == 2)
         {
             //총알생성및 발사
             GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
@@ -133,7 +133,7 @@ public class Shooting : MonoBehaviour
 
             ReloadCount();
         }
-        else if (Weapon == 2)
+        else if (Weapon == 3)
         {
             //샷건 코드
             for (int i = 0; i < 5; i++)

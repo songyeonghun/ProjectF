@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     float moveSpeed;
 
     public Image HealGauge;
+    public GameObject DeadFile;
     public GameObject HealGaugeMax;
     float time = 0;
     //대쉬
@@ -66,6 +67,7 @@ public class Player : MonoBehaviour
         //마우스 우클릭시 대쉬
         if (Input.GetMouseButtonDown(1) && canDash == true)
             StartCoroutine(Dash());
+
         //emp
         if (Input.GetKeyDown(KeyCode.Space) && HaveEmp >= 1)
         {
@@ -103,6 +105,13 @@ public class Player : MonoBehaviour
                 anim.SetBool("Idle", true);
                 anim.SetBool("Move", false);
             }
+
+        //죽으면 서류철 온
+        if (CurrentHp <= 0)
+        {
+            StartCoroutine(dead());
+            //캐릭터가 멈추게 해야함
+        }
     }
 
     void FixedUpdate()
@@ -171,5 +180,13 @@ public class Player : MonoBehaviour
             Shooting.Weapon = Weapon.WeaponCode;
             Destroy(collision.gameObject);
         }
+    }
+
+    //죽음
+    IEnumerator dead()
+    {
+        //죽는 애니메이션 코드
+        yield return new WaitForSeconds(2f);    //죽음 애니메이션 시간
+        DeadFile.SetActive(true);                   //이후 서류철 오픈
     }
 }
