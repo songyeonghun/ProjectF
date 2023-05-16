@@ -33,6 +33,9 @@ public class Player : MonoBehaviour
     static public int HaveKey = 0;
     static public int HaveCoin = 0;
 
+    public AudioClip[] sound;
+    public AudioSource audio;
+
     //스탯표
     static public int[][] stat = new int[5][]
     {
@@ -72,6 +75,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && HaveEmp >= 1)
         {
             Instantiate(emp, gameObject.transform.position, Quaternion.identity);
+            SoundPlay(0);
             HaveEmp--;
         }
 
@@ -128,12 +132,12 @@ public class Player : MonoBehaviour
         moveSpeed = moveSpeed * 1.5f;
         anim.SetBool("Roll", true);
         anim.SetBool("Move", false);
+        SoundPlay(2);
         yield return new WaitForSeconds(dashTime);
         anim.SetBool("Roll", false);
         canDash = true;
         gameObject.layer = 0;
         moveSpeed = stat[2][PlayerPrefs.GetInt("statMoveSpeed")]/2;
-
     }
 
     //제화회복
@@ -159,26 +163,31 @@ public class Player : MonoBehaviour
         {
             HaveCoin++;
             Destroy(collision.gameObject);
+            SoundPlay(1);
         }
         else if (collision.gameObject.tag == "Key")
         {
             HaveKey++;
             Destroy(collision.gameObject);
+            SoundPlay(1);
         }
         else if (collision.gameObject.tag == "emp")
         {
             HaveEmp++;
             Destroy(collision.gameObject);
+            SoundPlay(1);
         }
         else if (collision.gameObject.tag == "StatCoin")
         {
             GameManager2.StatCoin += 1;
             Destroy(collision.gameObject);
+            SoundPlay(1);
         }
         else if (collision.gameObject.tag == "Weapon")
         {
             Shooting.Weapon = Weapon.WeaponCode;
             Destroy(collision.gameObject);
+            SoundPlay(1);
         }
     }
 
@@ -188,5 +197,11 @@ public class Player : MonoBehaviour
         //죽는 애니메이션 코드
         yield return new WaitForSeconds(2f);    //죽음 애니메이션 시간
         DeadFile.SetActive(true);                   //이후 서류철 오픈
+    }
+
+    private void SoundPlay(int i)
+    {
+        audio.clip = sound[i];
+        audio.Play();
     }
 }

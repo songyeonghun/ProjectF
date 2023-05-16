@@ -11,6 +11,8 @@ public class Shooting : MonoBehaviour
 
     //무기종류를 판단하는 변수
     static public int Weapon = 0;     //0없음, 1권총, 2기관총, 샷건 
+    public AudioClip[] sound;
+    public AudioSource audio;
 
     //플레이어 오프젝트
     public SpriteRenderer PlayerRend;
@@ -21,9 +23,9 @@ public class Shooting : MonoBehaviour
 
     //무기별 스테이터스
     static public int[] damage = { 0, 3, 3, 3 };                                   //공격력
-    int[] Maxammo={0,8,5,20 };                                                  //탄창용량
-    int[] UseHp = { 0, 3, 7, 3 };                                             //발사시 채력소모값
-    float[] AtkCool = { 0,0.5f,1f,0.2f};                                      //공속
+    int[] Maxammo={0,8,20,5 };                                                  //탄창용량
+    int[] UseHp = { 0, 3, 3, 7 };                                             //발사시 채력소모값
+    float[] AtkCool = { 0,0.5f,0.2f,1f};                                      //공속
     static public bool atkCool = false;                     //공속및 딜레이 관련
     int[] ammo = { 0, 0, 0, 0 };                                //사용한 총알
     float[] UseHpCount= {0 ,0 ,0 ,0 };                          //사용한 체력
@@ -34,8 +36,6 @@ public class Shooting : MonoBehaviour
     //총알 나가는 위치, 총알 프리팹
     public Transform firepoint;
     public GameObject bulletPrefab;
-
-
 
     //마우스 때문에 필요한것들
     public Rigidbody2D rb;
@@ -130,6 +130,7 @@ public class Shooting : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firepoint.right * bulletForce, ForceMode2D.Impulse);
+            ShootSound(Weapon);
 
             ReloadCount();
         }
@@ -145,6 +146,8 @@ public class Shooting : MonoBehaviour
                 rb.AddForce(firepoint.right * shotgunForce, ForceMode2D.Impulse);
                 transform.Rotate(new Vector3(0, 0, 0));
             }
+            ShootSound(Weapon);
+
             ReloadCount();
         }
         else return;
@@ -158,6 +161,7 @@ public class Shooting : MonoBehaviour
         ammo[Weapon] = 0;
         Player.CurrentHp += (int)(UseHpCount[Weapon] * HpRegen[Regen] * 0.01f);
         UseHpCount[Weapon] = 0;
+        ReloadSound(Weapon);
     }
 
     //장전시 필요한 카운트
@@ -177,6 +181,37 @@ public class Shooting : MonoBehaviour
         atkCool = false;
     }
 
+    private void ShootSound(int i)
+    {
+        if (i == 1)
+        {
+            audio.clip = sound[0];
+        }else if (i == 2)
+        {
+            audio.clip = sound[2];
+        }
+        else if (i == 3)
+        {
+            audio.clip = sound[4];
+        }
+        audio.Play();
+    }
 
+    private void ReloadSound(int i)
+    {
+        if (i == 1)
+        {
+            audio.clip = sound[1];
+        }
+        else if (i == 2)
+        {
+            audio.clip = sound[3];
+        }
+        else if (i == 3)
+        {
+            audio.clip = sound[5];
+        }
+        audio.Play();
+    }
 
 }
