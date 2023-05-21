@@ -51,7 +51,6 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-
         Regen= PlayerPrefs.GetInt("StatHpRegen");
     }
     void Update()
@@ -66,6 +65,7 @@ public class Shooting : MonoBehaviour
         //장전
         if (Input.GetKeyDown("r"))
         {
+            ammo[Weapon] = Maxammo[Weapon];
             Invoke("Reload",1);
         }
 
@@ -111,7 +111,6 @@ public class Shooting : MonoBehaviour
             Player.anim.SetBool("Down", false);
             Player.anim.SetBool("Back", false);
             Player.anim.SetBool("Right", true);
-            PlayerRend.flipX = false;
 
         }
         else
@@ -158,9 +157,10 @@ public class Shooting : MonoBehaviour
     //장전
     void Reload() 
     {
-        ammo[Weapon] = 0;
         Player.CurrentHp += (int)(UseHpCount[Weapon] * HpRegen[Regen] * 0.01f);
+        ammo[Weapon] = 0;
         UseHpCount[Weapon] = 0;
+        atkCool = false;
         ReloadSound(Weapon);
     }
 

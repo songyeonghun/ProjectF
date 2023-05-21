@@ -10,17 +10,19 @@ public class Player : MonoBehaviour
     Vector2 movement;
     public static Animator anim;
     public GameObject emp;
+    public GameObject weapon;
 
-    float moveSpeed;
-
-    public Image HealGauge;
-    public GameObject DeadFile;
-    public GameObject HealGaugeMax;
     float time = 0;
+
     //대쉬
     bool canDash = true;
     float dashTime = 0.6f;
+    float moveSpeed;
 
+    //UI
+    public GameObject DeadFile;
+    public Image HealGauge;
+    public GameObject HealGaugeMax;
     public Image HpBar;
     static public int MaxHp;
     static public int CurrentHp;
@@ -33,6 +35,7 @@ public class Player : MonoBehaviour
     static public int HaveKey = 0;
     static public int HaveCoin = 0;
 
+    //시스템
     public AudioClip[] sound;
     public AudioSource audio;
 
@@ -52,6 +55,7 @@ public class Player : MonoBehaviour
         MaxHp = stat[0][PlayerPrefs.GetInt("statHp")];
         CurrentHp = MaxHp;
         anim = GetComponent<Animator>();
+        anim.SetBool("Spawn", true);
     }
 
     void Update()
@@ -64,8 +68,17 @@ public class Player : MonoBehaviour
         Coin.text = "" + HaveCoin;
 
         //이동
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        //죽음
+        if (CurrentHp <= 0)
+        {
+            anim.SetBool("Die", true);
+            StartCoroutine(dead());
+        }
+        else
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
 
         //마우스 우클릭시 대쉬
         if (Input.GetMouseButtonDown(1) && canDash == true)
@@ -110,12 +123,6 @@ public class Player : MonoBehaviour
                 anim.SetBool("Move", false);
             }
 
-        //죽으면 서류철 온
-        if (CurrentHp <= 0)
-        {
-            StartCoroutine(dead());
-            //캐릭터가 멈추게 해야함
-        }
     }
 
     void FixedUpdate()
@@ -136,7 +143,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(dashTime);
         anim.SetBool("Roll", false);
         canDash = true;
-        gameObject.layer = 0;
+        gameObject.layer = 10;
         moveSpeed = stat[2][PlayerPrefs.GetInt("statMoveSpeed")]/2;
     }
 
@@ -186,6 +193,7 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.tag == "Weapon")
         {
             Shooting.Weapon = Weapon.WeaponCode;
+            weapon.SetActive(true);
             Destroy(collision.gameObject);
             SoundPlay(1);
         }
@@ -194,7 +202,9 @@ public class Player : MonoBehaviour
     //죽음
     IEnumerator dead()
     {
-        //죽는 애니메이션 코드
+        Shooting.atkCool = true;
+        movement.x = 0;
+        movement.y = 0;
         yield return new WaitForSeconds(2f);    //죽음 애니메이션 시간
         DeadFile.SetActive(true);                   //이후 서류철 오픈
     }

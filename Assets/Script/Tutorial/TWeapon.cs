@@ -10,7 +10,7 @@ public class TWeapon : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Shooting.Weapon = WeaponCode;
+            Shooting.Weapon = 1;
             Destroy(gameObject);
         }
     }

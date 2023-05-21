@@ -2627,6 +2627,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3252668122111914776, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3252668122111914779, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: cam
       value: 
@@ -2708,6 +2712,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5395852216388503478}
     - target: {fileID: 7216895552344229341, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 4739603099781009549}
+    - target: {fileID: 7216895552344229341, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: DeadFile
       value: 
       objectReference: {fileID: 1981202744113977246}
@@ -2757,6 +2765,11 @@ Transform:
 --- !u!50 &6739853070991031848 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 3561638312227691965, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+  m_PrefabInstance: {fileID: 7846888499763356565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4739603099781009549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3252668122111914776, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
   m_PrefabInstance: {fileID: 7846888499763356565}
   m_PrefabAsset: {fileID: 0}
 --- !u!212 &7330386582595599505 stripped
