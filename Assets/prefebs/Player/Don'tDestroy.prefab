@@ -2579,6 +2579,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4245015452288068624}
     m_Modifications:
+    - target: {fileID: 675395110654467844, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 675395110654467845, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2629,7 +2633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3252668122111914776, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3252668122111914779, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: cam
@@ -2687,6 +2691,50 @@ PrefabInstance:
       propertyPath: sound.Array.data[5]
       value: 
       objectReference: {fileID: 8300000, guid: 69a4cf1a64f5d0141976c3b4fb039c85, type: 3}
+    - target: {fileID: 3987779852514971672, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987779852514971674, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 4245015453288010371}
+    - target: {fileID: 3987779852514971674, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: Ammo
+      value: 
+      objectReference: {fileID: 1057292867351477973}
+    - target: {fileID: 3987779852514971674, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: Left
+      value: 
+      objectReference: {fileID: 7727732701962445920}
+    - target: {fileID: 3987779852514971674, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: Right
+      value: 
+      objectReference: {fileID: 4896031518578133999}
+    - target: {fileID: 3987779852514971674, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7330386582595599502}
+    - target: {fileID: 3987779852514971674, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: PlayerRend
+      value: 
+      objectReference: {fileID: 7330386582595599505}
+    - target: {fileID: 3987779852514971675, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987779852514971675, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795811666528309166, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240668983182888060, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7216895552344229341, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: Hp
       value: 
@@ -2706,7 +2754,7 @@ PrefabInstance:
     - target: {fileID: 7216895552344229341, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: wprb
       value: 
-      objectReference: {fileID: 6739853070991031848}
+      objectReference: {fileID: 242329512334982914}
     - target: {fileID: 7216895552344229341, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: HpBar
       value: 
@@ -2714,7 +2762,7 @@ PrefabInstance:
     - target: {fileID: 7216895552344229341, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: weapon
       value: 
-      objectReference: {fileID: 4739603099781009549}
+      objectReference: {fileID: 2238951095036973479}
     - target: {fileID: 7216895552344229341, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: DeadFile
       value: 
@@ -2755,6 +2803,42 @@ PrefabInstance:
       propertyPath: sound.Array.data[5]
       value: 
       objectReference: {fileID: 8300000, guid: 69a4cf1a64f5d0141976c3b4fb039c85, type: 3}
+    - target: {fileID: 7772738761325297459, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 242329512334982914}
+    - target: {fileID: 7772738761325297459, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: Gun
+      value: 
+      objectReference: {fileID: 2238951095036973479}
+    - target: {fileID: 7772738761325297459, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 4245015453288010371}
+    - target: {fileID: 7772738761325297459, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: Left
+      value: 
+      objectReference: {fileID: 7727732701962445920}
+    - target: {fileID: 7772738761325297459, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: Right
+      value: 
+      objectReference: {fileID: 4896031518578133999}
+    - target: {fileID: 7772738761325297459, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7330386582595599502}
+    - target: {fileID: 8356400162743562801, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: Ammo
+      value: 
+      objectReference: {fileID: 1057292867351477973}
+    - target: {fileID: 8356400162743562801, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: PlayerRend
+      value: 
+      objectReference: {fileID: 7330386582595599505}
+    - target: {fileID: 8356400162743562803, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
 --- !u!4 &4896031518578133999 stripped
@@ -2762,14 +2846,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3393336140693596282, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
   m_PrefabInstance: {fileID: 7846888499763356565}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &6739853070991031848 stripped
+--- !u!50 &242329512334982914 stripped
 Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 3561638312227691965, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8050556983560887447, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
   m_PrefabInstance: {fileID: 7846888499763356565}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4739603099781009549 stripped
+--- !u!1 &2238951095036973479 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3252668122111914776, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8356400162743562802, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
   m_PrefabInstance: {fileID: 7846888499763356565}
   m_PrefabAsset: {fileID: 0}
 --- !u!212 &7330386582595599505 stripped

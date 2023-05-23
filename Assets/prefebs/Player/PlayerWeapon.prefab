@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5490476869705128790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0.6, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8095680441475337502}
@@ -58,8 +58,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8095680441475337500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.237, y: 3.781, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.1, z: 1}
+  m_LocalPosition: {x: 1, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 0.3, z: 1}
   m_Children:
   - {fileID: 1575126635169635231}
   m_Father: {fileID: 0}
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 10
   m_Sprite: {fileID: -6777538584400949825, guid: 54b7fe82ffad3d849832a7fc32ae1cfc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -138,13 +138,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 69a4cf1a64f5d0141976c3b4fb039c85, type: 3}
   audio: {fileID: 1380513627325494171}
   PlayerRend: {fileID: 0}
-  Right: {fileID: 0}
-  Left: {fileID: 0}
   firepoint: {fileID: 1575126635169635231}
   bulletPrefab: {fileID: 5354973741288540284, guid: af48462da91a6e24fb4212dfe8b25a47, type: 3}
-  rb: {fileID: 7788717414132245433}
-  cam: {fileID: 0}
-  player: {fileID: 0}
   Ammo: {fileID: 0}
 --- !u!50 &7788717414132245433
 Rigidbody2D:

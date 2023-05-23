@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public Rigidbody2D wprb;
+    public Rigidbody2D rb; public Rigidbody2D wprb;
     Vector2 movement;
     public static Animator anim;
     public GameObject emp;
@@ -51,6 +50,12 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        //스폰 초기화
+        HaveEmp = 0;
+        HaveKey = 0;
+        HaveCoin = 0;
+        weapon.SetActive(false);
+
         moveSpeed = stat[2][PlayerPrefs.GetInt("statMoveSpeed")]/2;
         MaxHp = stat[0][PlayerPrefs.GetInt("statHp")];
         CurrentHp = MaxHp;

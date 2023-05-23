@@ -17,10 +17,6 @@ public class Shooting : MonoBehaviour
     //플레이어 오프젝트
     public SpriteRenderer PlayerRend;
 
-    //무기 위치
-   public Transform Right;
-   public Transform Left;
-
     //무기별 스테이터스
     static public int[] damage = { 0, 3, 3, 3 };                                   //공격력
     int[] Maxammo={0,8,20,5 };                                                  //탄창용량
@@ -37,15 +33,6 @@ public class Shooting : MonoBehaviour
     public Transform firepoint;
     public GameObject bulletPrefab;
 
-    //마우스 때문에 필요한것들
-    public Rigidbody2D rb;
-    public Camera cam;
-    static public Vector2 len;
-    Vector2 mousepos;
-
-    //총 위치 때문에 필요한것들
-    public GameObject player;
-
     //탄환
     public Text Ammo;
 
@@ -55,6 +42,8 @@ public class Shooting : MonoBehaviour
     }
     void Update()
     {
+        gameObject.transform.localPosition = new Vector2(0, 0);
+
         //마우스 좌클릭시 총발사 및 채력감소 (쿨타임)
         if (Input.GetMouseButton(0) && atkCool == false&&ammo[Weapon]<Maxammo[Weapon])
         {
@@ -72,53 +61,6 @@ public class Shooting : MonoBehaviour
         //탄환수 나오는거
         Ammo.text = ""+(Maxammo[Weapon]-ammo[Weapon])+" / "+Maxammo[Weapon];
 
-        //마우스위치에 따른 손에서의 무기 위치
-        if (mousepos.x<player.transform.position.x)
-        {
-            gameObject.transform.position = Right.position;
-            gameObject.transform.localScale=new Vector3(1.5f, -0.6f, 0);
-        }
-        else
-        {
-            gameObject.transform.position = Left.position;
-            gameObject.transform.localScale = new Vector3(1.5f, 0.6f, 0);
-        }
-
-        //무기 회전을 위한 마우스 좌표값 
-        mousepos = cam.ScreenToWorldPoint(Input.mousePosition);
-    }
-    void FixedUpdate()
-    {
-        //마우스 위치에 따른 플레이어 회전
-        Vector2 lookdir = mousepos - rb.position;
-        float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
-
-        if (angle>=-135&&angle<=-45) //Up Right
-        {
-            Player.anim.SetBool("Down", true);
-            Player.anim.SetBool("Back", false);
-            Player.anim.SetBool("Right", false);
-        }
-        else if (angle >= 67 && angle <= 112)
-        {
-            Player.anim.SetBool("Down", false);
-            Player.anim.SetBool("Back", true);
-            Player.anim.SetBool("Right", false);
-        }
-        else if (angle >= 158 || angle <= -135)
-        {
-            Player.anim.SetBool("Down", false);
-            Player.anim.SetBool("Back", false);
-            Player.anim.SetBool("Right", true);
-
-        }
-        else
-        {
-            Player.anim.SetBool("Down", false);
-            Player.anim.SetBool("Back", false);
-            Player.anim.SetBool("Right", true);
-        }
     }
 
     void Shoot()
