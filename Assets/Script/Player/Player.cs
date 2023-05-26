@@ -81,8 +81,10 @@ public class Player : MonoBehaviour
         }
         else
         {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
+            float moveX= Input.GetAxisRaw("Horizontal");
+            float moveY = Input.GetAxisRaw("Vertical");
+
+            movement = new Vector2(moveX, moveY).normalized;
         }
 
         //마우스 우클릭시 대쉬
@@ -132,8 +134,10 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        rb.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
+
         //rb를 이용한 물리적 플레이어 이동
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     //대쉬

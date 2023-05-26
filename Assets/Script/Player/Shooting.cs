@@ -55,7 +55,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown("r"))
         {
             ammo[Weapon] = Maxammo[Weapon];
-            Invoke("Reload",1);
+            StartCoroutine(Reload());
         }
 
         //탄환수 나오는거
@@ -97,13 +97,15 @@ public class Shooting : MonoBehaviour
     }
 
     //장전
-    void Reload() 
+    IEnumerator Reload() 
     {
+        yield return new WaitForSeconds(0.7f);
+        ReloadSound(Weapon);
+        yield return new WaitForSeconds(0.3f);
         Player.CurrentHp += (int)(UseHpCount[Weapon] * HpRegen[Regen] * 0.01f);
         ammo[Weapon] = 0;
         UseHpCount[Weapon] = 0;
         atkCool = false;
-        ReloadSound(Weapon);
     }
 
     //장전시 필요한 카운트
