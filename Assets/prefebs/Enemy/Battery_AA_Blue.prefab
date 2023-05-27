@@ -65,9 +65,9 @@ GameObject:
   - component: {fileID: 2387100843240435211}
   - component: {fileID: 2387100843240435201}
   - component: {fileID: 918719659}
-  - component: {fileID: 918719662}
+  - component: {fileID: 4345491317793623569}
   m_Layer: 21
-  m_Name: Battery_9V_Pink
+  m_Name: Battery_AA_Blue
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8517196118363972680, guid: 7c7cfaa51dc6caa41b4d494508a4ea73, type: 3}
+  m_Sprite: {fileID: -7439492889909231754, guid: 1b7ca1ed21c86134a9df27e3854dc2a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -189,7 +189,7 @@ Animator:
   m_GameObject: {fileID: 2387100843240435202}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cbf8aabda889ed747ab02c5a902b205a, type: 2}
+  m_Controller: {fileID: 9100000, guid: bc7f769ad4b256048a8cfc6bb2d0cc3c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -198,7 +198,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &918719662
+--- !u!114 &4345491317793623569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,10 +207,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2387100843240435202}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05f90185fca03354bb784b03ff6af6d3, type: 3}
+  m_Script: {fileID: 11500000, guid: f4a7d08d8cf988d44acc47281196be5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 56579956926916303, guid: e0aeea39f1f8ee5408a0b16cc31e93ea, type: 3}
+  bulletPrefab: {fileID: 56579956926916303, guid: d5f6a9b835867da46b51ba9b8ed8700c, type: 3}
   firepoint: {fileID: 2387100842155849502}
   rb: {fileID: 2387100842155849501}
 --- !u!1 &8663748861875798850
@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2364729065778994547}
   - component: {fileID: 1838932177}
-  - component: {fileID: 2948976381771422701}
+  - component: {fileID: 448754333}
   m_Layer: 15
   m_Name: Body
   m_TagString: Enemy
@@ -271,7 +271,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.9426656}
   m_EdgeRadius: 0
---- !u!114 &2948976381771422701
+--- !u!114 &448754333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,4 +284,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Body: {fileID: 2387100843240435202}
-  Hp: 10
+  Hp: 15
