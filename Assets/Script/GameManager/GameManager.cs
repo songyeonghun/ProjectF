@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [DisallowMultipleComponent]
 public class GameManager : SingletonMonobehaviour<GameManager>
@@ -76,7 +77,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     {
         // Build dungeon for level
         bool dungeonBuiltSucessfully = DungeonBuilder.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);
-
         if (!dungeonBuiltSucessfully)
         {
             Debug.LogError("Couldn't build dungeon from specified rooms and node graphs");
