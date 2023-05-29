@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 698514553, guid: ec71d31fb1ecf314e9d0d84941d93c3a, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 56579956926916303, guid: a76f9c6cf16c56f42b074571ec7ca3f4, type: 3}
+    - target: {fileID: 698514553, guid: ec71d31fb1ecf314e9d0d84941d93c3a, type: 3}
+      propertyPath: bulletPrefab4
+      value: 
+      objectReference: {fileID: 5886624852063795746, guid: 3193d3ea43232e74cae67a3e3e7db343, type: 3}
     - target: {fileID: 2387100843240435202, guid: ec71d31fb1ecf314e9d0d84941d93c3a, type: 3}
       propertyPath: m_Name
       value: Speaker
@@ -140,11 +148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2387100843240435206, guid: ec71d31fb1ecf314e9d0d84941d93c3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.67
+      value: -1.71
       objectReference: {fileID: 0}
     - target: {fileID: 2387100843240435206, guid: ec71d31fb1ecf314e9d0d84941d93c3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.57
+      value: 5.64
       objectReference: {fileID: 0}
     - target: {fileID: 2387100843240435206, guid: ec71d31fb1ecf314e9d0d84941d93c3a, type: 3}
       propertyPath: m_LocalPosition.z

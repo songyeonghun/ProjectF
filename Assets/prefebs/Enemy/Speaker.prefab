@@ -519,6 +519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 56579956926916303, guid: e0aeea39f1f8ee5408a0b16cc31e93ea, type: 3}
   bulletPrefab1: {fileID: 5886624852063795746, guid: 31c4725bcc38d974aad00c25f6e8aa7e, type: 3}
+  bulletPrefab2: {fileID: 5886624852063795746, guid: 86461146c7d3f7a46a466ae5e45bdb4d, type: 3}
+  bulletPrefab3: {fileID: 5886624852063795746, guid: 07e002fc9aada1b479f277179afa3759, type: 3}
   firepoint: {fileID: 2387100842155849502}
   firepoint1: {fileID: 1587155099}
   firepoint2: {fileID: 885029987}
