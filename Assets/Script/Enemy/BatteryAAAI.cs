@@ -31,7 +31,7 @@ public class BatteryAAAI : MonoBehaviour
     int attackCount = 0;
 
     public Transform Enemy; //각도 재는 용도
-    public Transform AngleTarget;
+    //public Transform AngleTarget;
 
     private void Start()
     {
@@ -127,7 +127,7 @@ public class BatteryAAAI : MonoBehaviour
 
     private float GetAngle()
     {
-        return Mathf.Atan2(AngleTarget.position.y - Enemy.position.y, AngleTarget.position.x - Enemy.position.x) * Mathf.Rad2Deg;
+        return Mathf.Atan2(target.transform.position.y - Enemy.position.y, target.transform.position.x - Enemy.position.x) * Mathf.Rad2Deg;
     }
 
     void Shoot()

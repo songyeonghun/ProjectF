@@ -24,14 +24,14 @@ public class BatteryAAAAI : MonoBehaviour
     bool PlayerGet = false;                     //플레이어를 발견하여 공격모드에 들어가는지
     bool isAtkack = false;
 
-    float atkCool=0.33f;                       //공격딜레이 시간(인스펙터창에서 수정)
-    float bulletForce = 15f;                    //총알 속도
+    float atkCool=0.2f;                       //공격딜레이 시간(인스펙터창에서 수정)
+    float bulletForce = 20f;                    //총알 속도
     float Angle = 0;
 
     int attackCount = 0;
 
     public Transform Enemy; //각도 재는 용도
-    public Transform AngleTarget;
+    //public Transform AngleTarget;
 
     private void Start()
     {
@@ -73,7 +73,7 @@ public class BatteryAAAAI : MonoBehaviour
 
         if (isAtkack == false)
         {
-            if (PlayerGet == true && attackCount >= 3)                              //플레이어를 찾으면 사격 아니면 추적
+            if (PlayerGet == true && attackCount >= 10)                              //플레이어를 찾으면 사격 아니면 추적
             {
                 isAtkack = true;
                 anim.SetBool("isAttack", true);
@@ -127,13 +127,13 @@ public class BatteryAAAAI : MonoBehaviour
 
     private float GetAngle()
     {
-        return Mathf.Atan2(AngleTarget.position.y - Enemy.position.y, AngleTarget.position.x - Enemy.position.x) * Mathf.Rad2Deg;
+        return Mathf.Atan2(target.transform.position.y - Enemy.position.y, target.transform.position.x - Enemy.position.x) * Mathf.Rad2Deg;
     }
 
     void Shoot()
     {
         attackCount++;
-        Debug.Log("공격");
+        //Debug.Log("공격");
         //공격
         AudioSource.PlayClipAtPoint(Attack, transform.position);
         GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);

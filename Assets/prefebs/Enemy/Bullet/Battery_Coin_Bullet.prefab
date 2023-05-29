@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6705617865385611634}
   - component: {fileID: 1041751748246174695}
   m_Layer: 16
-  m_Name: Battery_9V_Bullet
+  m_Name: Battery_Coin_Bullet
   m_TagString: enemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ SpriteRenderer:
   m_SortingLayerID: -790355531
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7721096156774366211, guid: 20e65687a4d3b254086acaee7e89d764, type: 3}
+  m_Sprite: {fileID: 7919044828672085045, guid: efc60830271ce5549a79e9b24291265e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,7 +118,7 @@ Animator:
   m_GameObject: {fileID: 56579956926916303}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: feedcd9b01341b1458f4158ff5b0e36f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5aa310f9e3300f94db41322a02a90ece, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -155,4 +155,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7302939a6a0d20744a850345edbb337a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 20
+  Damage: 15
