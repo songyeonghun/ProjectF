@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class BatteryAAAI : MonoBehaviour
+public class BatteryAAAAI : MonoBehaviour
 {
     public GameObject bulletPrefab;          //총 발사시 생성될 탄환
     public Transform firepoint;                 //총알이 발사될 위치
     public static Animator anim;
-    public GameObject AttackEffect;
+    //public GameObject AttackEffect;
     
     GameObject target;                    //추적할 상대
     NavMeshAgent agent;                       //추적을 하는대상(나)
@@ -77,7 +77,7 @@ public class BatteryAAAI : MonoBehaviour
             {
                 isAtkack = true;
                 anim.SetBool("isAttack", true);
-                AttackEffect.SetActive(true);
+                //AttackEffect.SetActive(true);
                 Invoke("Shoot", 2f); //총 쏘고 대기 딜레이
                 attackCount = 0;
             }
@@ -85,7 +85,7 @@ public class BatteryAAAI : MonoBehaviour
             {
                 isAtkack = true;
                 anim.SetBool("isAttack", true);
-                AttackEffect.SetActive(true);
+                //AttackEffect.SetActive(true);
                 Invoke("Shoot", atkCool); //총 쏘고 대기 딜레이
                 
             }
@@ -93,7 +93,7 @@ public class BatteryAAAI : MonoBehaviour
             {
                 agent.SetDestination(target.transform.position);      //플레이어를 못찾으면 추적
                 anim.SetBool("isAttack", false);
-                AttackEffect.SetActive(false);
+                //AttackEffect.SetActive(false);
             }
         }
         mousepos = target.transform.position;

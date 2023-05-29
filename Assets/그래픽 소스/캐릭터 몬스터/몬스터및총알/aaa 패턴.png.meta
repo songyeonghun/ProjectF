@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 1b7ca1ed21c86134a9df27e3854dc2a8
+guid: abce1906cfbd9d243a3b4ca509829407
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7439492889909231754
-    second: "AA \uAC74\uC804\uC9C0 \uD328\uD134_0"
+      213: -7535454166502406188
+    second: "aaa \uD328\uD134_0"
   - first:
-      213: 7894968864632334298
-    second: "AA \uAC74\uC804\uC9C0 \uD328\uD134_1"
+      213: -713684677061955510
+    second: "aaa \uD328\uD134_1"
   - first:
-      213: 9031124771609501653
-    second: "AA \uAC74\uC804\uC9C0 \uD328\uD134_2"
+      213: -7645016124940471737
+    second: "aaa \uD328\uD134_2"
   - first:
-      213: 233277962556028778
-    second: "AA \uAC74\uC804\uC9C0 \uD328\uD134_3"
-  - first:
-      213: -7124918016604659978
-    second: "AA \uAC74\uC804\uC9C0 \uD328\uD134_4"
-  - first:
-      213: -6541936895412711556
-    second: "AA \uAC74\uC804\uC9C0 \uD328\uD134_5"
+      213: -6332024000996247917
+    second: "aaa \uD328\uD134_3"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,127 +115,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "AA \uAC74\uC804\uC9C0 \uD328\uD134_0"
+      name: "aaa \uD328\uD134_0"
       rect:
         serializedVersion: 2
-        x: 8
-        y: 82
-        width: 18
-        height: 34
+        x: 10
+        y: 40
+        width: 45
+        height: 49
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67f7aebf1ac91c890800000000000000
-      internalID: -7439492889909231754
+      spriteID: 4d703603c50bc6790800000000000000
+      internalID: -7535454166502406188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "AA \uAC74\uC804\uC9C0 \uD328\uD134_1"
+      name: "aaa \uD328\uD134_1"
       rect:
         serializedVersion: 2
-        x: 33
-        y: 82
-        width: 18
-        height: 34
+        x: 52
+        y: 40
+        width: 45
+        height: 49
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad7ed216a50909d60800000000000000
-      internalID: 7894968864632334298
+      spriteID: a403516419b7816f0800000000000000
+      internalID: -713684677061955510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "AA \uAC74\uC804\uC9C0 \uD328\uD134_2"
+      name: "aaa \uD328\uD134_2"
       rect:
         serializedVersion: 2
-        x: 30
-        y: 19
-        width: 25
-        height: 46
+        x: 99
+        y: 40
+        width: 45
+        height: 49
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dfd30e7120055d70800000000000000
-      internalID: 9031124771609501653
+      spriteID: 7423ac2e65277e590800000000000000
+      internalID: -7645016124940471737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "AA \uAC74\uC804\uC9C0 \uD328\uD134_3"
+      name: "aaa \uD328\uD134_3"
       rect:
         serializedVersion: 2
-        x: 58
-        y: 82
-        width: 18
-        height: 34
+        x: 153
+        y: 34
+        width: 35
+        height: 42
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a67341c2215cc3300800000000000000
-      internalID: 233277962556028778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "AA \uAC74\uC804\uC9C0 \uD328\uD134_4"
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 19
-        width: 25
-        height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6fe9f7630d43f1d90800000000000000
-      internalID: -7124918016604659978
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "AA \uAC74\uC804\uC9C0 \uD328\uD134_5"
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 82
-        width: 18
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7f47e5ed0f5635a0800000000000000
-      internalID: -6541936895412711556
+      spriteID: 396fe5738b12028a0800000000000000
+      internalID: -6332024000996247917
       vertices: []
       indices: 
       edges: []
