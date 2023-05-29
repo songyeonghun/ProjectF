@@ -9,7 +9,7 @@ public class Chest : MonoBehaviour
     AudioSource audio;
 
     public Transform spawnPoint;
-    public GameObject itemPrefab;
+    public GameObject[] itemPrefab;
 
     private void Start()
     {
@@ -20,9 +20,7 @@ public class Chest : MonoBehaviour
         if(Input.GetKeyDown("e") && Player.HaveKey > 0)
             if (playerGet == true)
             {
-                //ÃÑ»ý¼º
-                GameObject bullet = Instantiate(itemPrefab, spawnPoint.position, spawnPoint.rotation);
-                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                Instantiate(itemPrefab[Random.Range(0, 4)], this.transform.position, Quaternion.identity);
                 Player.HaveKey--;
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = open;
                 audio.Play();

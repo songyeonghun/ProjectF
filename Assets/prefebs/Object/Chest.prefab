@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4575669991554643611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4575669992052654093}
   m_Father: {fileID: 0}
@@ -102,7 +102,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: {fileID: -2817884228449214865, guid: c03753e08d0822c44a8a7d78f7ab46b0, type: 3}
   spawnPoint: {fileID: 4575669992052654093}
-  itemPrefab: {fileID: 2269196470214100354, guid: b6bb708fc58c2dd42a9a4d7d42f7d956, type: 3}
+  itemPrefab:
+  - {fileID: 2269196470214100354, guid: b6bb708fc58c2dd42a9a4d7d42f7d956, type: 3}
+  - {fileID: 1344953944982391933, guid: f6d9b867a0fb9964e9ca91f79763ad2e, type: 3}
+  - {fileID: 485013900035023856, guid: 280ab7fa0d6650f4c889403f376f03f4, type: 3}
+  - {fileID: 0}
 --- !u!58 &4575669991554643620
 CircleCollider2D:
   m_ObjectHideFlags: 0

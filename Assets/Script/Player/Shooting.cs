@@ -7,7 +7,6 @@ public class Shooting : MonoBehaviour
 {
     //
     int[] HpRegen={ 50, 0, 55, 0, 60, 0, 65, 0, 70, 0, 80};
-    int[] statDamage = { 0, 0, 2, 0, 4, 0, 6, 0, 8, 0, 10 };
 
     //무기종류를 판단하는 변수
     static public int Weapon = 0;     //0없음, 1권총, 2기관총, 샷건 
@@ -18,9 +17,9 @@ public class Shooting : MonoBehaviour
     public SpriteRenderer PlayerRend;
 
     //무기별 스테이터스
-    static public int[] damage = { 0, 3, 3, 3 };                                   //공격력
+    static public int[] damage = { 0, 5, 4, 3 };                                   //공격력
     int[] Maxammo={0,8,20,5 };                                                  //탄창용량
-    int[] UseHp = { 0, 3, 3, 7 };                                             //발사시 채력소모값
+    int[] UseHp = { 0, 3, 2, 5 };                                             //발사시 채력소모값
     float[] AtkCool = { 0,0.5f,0.2f,1f};                                      //공속
     static public bool atkCool = false;                     //공속및 딜레이 관련
     int[] ammo = { 0, 0, 0, 0 };                                //사용한 총알
