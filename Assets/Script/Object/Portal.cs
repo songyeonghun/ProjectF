@@ -9,6 +9,7 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Destroy(collision);
         if (collision.gameObject.tag=="Player")
         {
             SceneManager.LoadScene(PortalName);

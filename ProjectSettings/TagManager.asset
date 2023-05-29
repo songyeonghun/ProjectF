@@ -24,6 +24,7 @@ TagManager:
   - StatCoin
   - Wall
   - Enemy
+  - TWeapon
   layers:
   - Default
   - TransparentFX

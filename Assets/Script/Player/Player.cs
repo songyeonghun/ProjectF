@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     //UI
     public GameObject DeadFile;
+    public GameObject Menu;
     public Image HealGauge;
     public GameObject HealGaugeMax;
     public Image HpBar;
@@ -39,14 +40,14 @@ public class Player : MonoBehaviour
     public AudioSource audio;
 
     //스탯표
-    static public int[][] stat = new int[5][]
+    static public int[][] stat = new int[2][]
     {
-        new int[]{ 300,320,340,360,380,400,420,440,460,480,500},    //0 채력
-        new int[]{ 0,0,2,0,4,0,6,0,8,0,10},                                 //1 공격력
-        new int[]{ 10,11,12,13,14,15},                                    //2 이동속도
-        new int[]{ 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 15},                //3 공격속도
-        new int[]{ 50, 0, 55, 0, 60, 0, 65, 0, 70, 0, 80}                 //5 채력회복
+         new int[]{ 300,320,340,360,380,400,420,440,460,480,500},    //0 채력
+         new int[]{ 10,11,12,13,14,15},                                    //2 이동속도
     };
+
+    int[] HealCoin = { 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 100};
+    int HealCount = 0;
 
     void Start()
     {
@@ -56,8 +57,8 @@ public class Player : MonoBehaviour
         HaveCoin = 0;
         weapon.SetActive(false);
 
-        moveSpeed = stat[2][PlayerPrefs.GetInt("statMoveSpeed")]/2;
         MaxHp = stat[0][PlayerPrefs.GetInt("statHp")];
+        moveSpeed = stat[1][PlayerPrefs.GetInt("statMoveSpeed")]/2;
         CurrentHp = MaxHp;
         anim = GetComponent<Animator>();
         anim.SetBool("Spawn", true);
@@ -72,6 +73,10 @@ public class Player : MonoBehaviour
         Emp.text = "" + HaveEmp;
         Coin.text = "" + HaveCoin;
 
+        /*if (CurrentHp > MaxHp)
+        {
+            CurrentHp = MaxHp;
+        }*/
         //이동
         //죽음
         if (CurrentHp <= 0)
@@ -100,18 +105,17 @@ public class Player : MonoBehaviour
         }
 
         //제화 회복
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift)&&HaveCoin>HealCoin[HealCount]&&CurrentHp<MaxHp)
         {
             Heal();
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift)&HaveCoin>=10)
-        {
-            HealGaugeMax.SetActive(true);
-        }else if (Input.GetKeyUp(KeyCode.LeftShift))
+        else
         {
             HealGaugeMax.SetActive(false);
+            HealGauge.gameObject.SetActive(false);
             time = 0;
         }
+
 
             //애니메이션
             if (Input.GetAxisRaw("Horizontal") > 0.6f || Input.GetAxisRaw("Horizontal") < -0.6f)
@@ -130,14 +134,18 @@ public class Player : MonoBehaviour
                 anim.SetBool("Move", false);
             }
 
+        //메뉴UI
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Menu.SetActive(true);
+            Time.timeScale = 0;
+            Shooting.atkCool = true;
+        }
     }
 
     void FixedUpdate()
     {
         rb.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
-
-        //rb를 이용한 물리적 플레이어 이동
-        //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     //대쉬
@@ -145,7 +153,7 @@ public class Player : MonoBehaviour
     {
         canDash = false;
         gameObject.layer = 0;
-        moveSpeed = moveSpeed * 1.5f;
+        moveSpeed = stat[1][PlayerPrefs.GetInt("statMoveSpeed")];
         anim.SetBool("Roll", true);
         anim.SetBool("Move", false);
         SoundPlay(2);
@@ -153,7 +161,7 @@ public class Player : MonoBehaviour
         anim.SetBool("Roll", false);
         canDash = true;
         gameObject.layer = 10;
-        moveSpeed = stat[2][PlayerPrefs.GetInt("statMoveSpeed")]/2;
+        moveSpeed = stat[1][PlayerPrefs.GetInt("statMoveSpeed")]/2;
     }
 
     //제화회복
@@ -161,13 +169,20 @@ public class Player : MonoBehaviour
     {
         time += Time.deltaTime;
         HealGauge.fillAmount = time / 2;
-        if (time >= 2 && HaveCoin > 10)
+        HealGaugeMax.SetActive(true);
+        HealGauge.gameObject.SetActive(true);
+        if (time >= 2 && HaveCoin >= HealCoin[HealCount])
         {
-            CurrentHp += 10;
-            HaveCoin -= 10;
-            Debug.Log(time);
+            CurrentHp += (int)(MaxHp*0.3f);
+            HaveCoin -= HealCoin[HealCount];
+            if(CurrentHp>MaxHp)
+            {
+                CurrentHp = MaxHp;
+            }
+
             time = 0;
             HealGauge.gameObject.SetActive(false);
+            HealGaugeMax.SetActive(false);
         }
     }
 
@@ -201,7 +216,13 @@ public class Player : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Weapon")
         {
-            Shooting.Weapon = Weapon.WeaponCode;
+            weapon.SetActive(true);
+            Destroy(collision.gameObject);
+            SoundPlay(1);
+        }
+        else if (collision.gameObject.tag == "TWeapon")
+        {
+            Shooting.Weapon = 1;
             weapon.SetActive(true);
             Destroy(collision.gameObject);
             SoundPlay(1);

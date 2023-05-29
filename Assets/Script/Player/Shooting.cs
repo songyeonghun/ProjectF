@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
-    //임시변수
+    //
     int[] HpRegen={ 50, 0, 55, 0, 60, 0, 65, 0, 70, 0, 80};
-    int Regen;
+    int[] statDamage = { 0, 0, 2, 0, 4, 0, 6, 0, 8, 0, 10 };
 
     //무기종류를 판단하는 변수
     static public int Weapon = 0;     //0없음, 1권총, 2기관총, 샷건 
@@ -25,7 +25,11 @@ public class Shooting : MonoBehaviour
     static public bool atkCool = false;                     //공속및 딜레이 관련
     int[] ammo = { 0, 0, 0, 0 };                                //사용한 총알
     float[] UseHpCount= {0 ,0 ,0 ,0 };                          //사용한 체력
-    
+    SpriteRenderer weapon;
+    public Sprite pistol;
+    public Sprite rifle;
+    public Sprite shotgun;
+
     //탄속
     float bulletForce = 20f;
 
@@ -38,10 +42,22 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-        Regen= PlayerPrefs.GetInt("StatHpRegen");
+        weapon = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
+        if (Weapon == 1)
+        {
+            weapon.sprite = pistol;
+        }else if (Weapon == 2)
+        {
+            weapon.sprite = rifle;
+        }
+        else if (Weapon == 3)
+        {
+            weapon.sprite = shotgun;
+        }
+
         gameObject.transform.localPosition = new Vector2(0, 0);
 
         //마우스 좌클릭시 총발사 및 채력감소 (쿨타임)
@@ -102,7 +118,11 @@ public class Shooting : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
         ReloadSound(Weapon);
         yield return new WaitForSeconds(0.3f);
-        Player.CurrentHp += (int)(UseHpCount[Weapon] * HpRegen[Regen] * 0.01f);
+        Player.CurrentHp += (int)(UseHpCount[Weapon] * HpRegen[PlayerPrefs.GetInt("StatHpRegen")] * 0.01f);
+        if (Player.CurrentHp>Player.MaxHp)
+        {
+            Player.CurrentHp = Player.MaxHp;
+        }
         ammo[Weapon] = 0;
         UseHpCount[Weapon] = 0;
         atkCool = false;

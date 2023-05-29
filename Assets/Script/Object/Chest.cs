@@ -27,6 +27,7 @@ public class Chest : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = open;
                 audio.Play();
                 StartCoroutine(Open());
+                playerGet = false;
             }
     }
 

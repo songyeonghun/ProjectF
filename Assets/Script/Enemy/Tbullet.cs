@@ -6,6 +6,12 @@ public class Tbullet : MonoBehaviour
 {
     public int TowerNum;
 
+
+    private void Start()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(gameObject.transform.right*1, ForceMode2D.Impulse);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -19,7 +25,6 @@ public class Tbullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         Destroy(this.gameObject);
     }
 }
