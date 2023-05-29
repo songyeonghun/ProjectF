@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2992337767857972334}
   - component: {fileID: -8792943730620730011}
   - component: {fileID: 2152830701695466741}
+  - component: {fileID: -3875515663844716182}
   m_Layer: 16
   m_Name: TBullet1
   m_TagString: enemyBullet
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a2482871b46d396438236c07b6402283, type: 3}
+  m_Sprite: {fileID: 7721096156774366211, guid: 20e65687a4d3b254086acaee7e89d764, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,3 +137,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TowerNum: 1
+--- !u!95 &-3875515663844716182
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3333799350127334652}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: feedcd9b01341b1458f4158ff5b0e36f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
