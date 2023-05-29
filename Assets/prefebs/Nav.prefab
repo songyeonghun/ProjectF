@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6784427569051588108}
   - component: {fileID: 6784427569051588111}
-  - component: {fileID: 6784427569051588110}
+  - component: {fileID: 6539771394403174743}
   m_Layer: 0
   m_Name: Nav
   m_TagString: Untagged
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &6784427569051588110
+--- !u!114 &6539771394403174743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,6 +75,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6784427569051588109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9c99376d6e08344592480e7a6466ab7, type: 3}
+  m_Script: {fileID: 11500000, guid: e19afff371603be41bff94e25e1cb298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
