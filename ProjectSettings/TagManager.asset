@@ -25,6 +25,7 @@ TagManager:
   - Wall
   - Enemy
   - TWeapon
+  - Stone
   layers:
   - Default
   - TransparentFX

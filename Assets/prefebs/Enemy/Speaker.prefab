@@ -594,6 +594,7 @@ MonoBehaviour:
   Nasa: {fileID: 1943884122876641044, guid: 40609e0795710574482bf206c38a4af8, type: 3}
   MoonStone: {fileID: 4512133707625267139, guid: 559529afe6e53f541ac4b9b9c7db9d85, type: 3}
   EnemyDie: {fileID: 4819539885009302124, guid: 1001cb55bbc618c4798bf0b1cf68047e, type: 3}
+  DieCount: {fileID: 0}
   HealthBar: {fileID: 1797168225497601293}
 --- !u!1001 &6297851707776578750
 PrefabInstance:
@@ -602,6 +603,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2387100843240435206}
     m_Modifications:
+    - target: {fileID: 8314625586554850801, guid: f2e29dd0e4fda7841a1ed8c2b7a90cdf, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8314625586554850802, guid: f2e29dd0e4fda7841a1ed8c2b7a90cdf, type: 3}
       propertyPath: m_Pivot.x
       value: 0

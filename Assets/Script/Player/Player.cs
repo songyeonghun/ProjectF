@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
         if (CurrentHp <= 0)
         {
             anim.SetBool("Die", true);
-            StartCoroutine(dead());
+            StartCoroutine(dead(2f));
         }
         else
         {
@@ -96,6 +96,12 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && canDash == true)
             StartCoroutine(Dash());
 
+        if (Input.GetKeyDown("1"))
+        {
+            HaveCoin += 50;
+            GameManager2.StatCoin += 30;
+        }
+
         //emp
         if (Input.GetKeyDown(KeyCode.Space) && HaveEmp >= 1)
         {
@@ -105,7 +111,7 @@ public class Player : MonoBehaviour
         }
 
         //제화 회복
-        if (Input.GetKey(KeyCode.LeftShift)&&HaveCoin>HealCoin[HealCount]&&CurrentHp<MaxHp)
+        if (Input.GetKey(KeyCode.LeftShift)&&HaveCoin>=HealCoin[HealCount]&&CurrentHp<MaxHp)
         {
             Heal();
         }
@@ -227,15 +233,22 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             SoundPlay(1);
         }
+        else if (collision.gameObject.tag == "Stone")
+        {
+            StartCoroutine(dead(0.5f));
+            Destroy(collision.gameObject);
+        }
+
     }
 
     //죽음
-    IEnumerator dead()
+    IEnumerator dead(float f)
     {
+        Destroy(GameObject.Find("MapSound"));
         Shooting.atkCool = true;
         movement.x = 0;
         movement.y = 0;
-        yield return new WaitForSeconds(2f);//죽음 애니메이션 시간
+        yield return new WaitForSeconds(f);//죽음 애니메이션 시간
         Time.timeScale = 0;
         DeadFile.SetActive(true);                   //이후 서류철 오픈
     }

@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 2076329665608924751}
   - component: {fileID: 2076329665608924744}
   - component: {fileID: -8789631530302486336}
+  - component: {fileID: 817711076832332248}
   m_Layer: 22
   m_Name: TChest
   m_TagString: Untagged
@@ -255,3 +256,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &817711076832332248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076329665608924745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672bed09d89b2894a98954bcdeb9a13b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 2076329664284981494}
+  itemPrefab: {fileID: 8058065882407491572, guid: af182665e7ad84c4a96be7733f439b33, type: 3}
