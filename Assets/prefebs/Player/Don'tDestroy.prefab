@@ -3952,8 +3952,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2293154438427191032, guid: 1884c0b5522ba6247a6c1179d25d36bb, type: 3}
     - target: {fileID: 675395110654467844, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 675395110654467844, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: m_SortingOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 675395110654467844, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -653709415
       objectReference: {fileID: 0}
     - target: {fileID: 675395110654467845, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: m_RootOrder
@@ -4063,6 +4071,14 @@ PrefabInstance:
       propertyPath: sound.Array.data[5]
       value: 
       objectReference: {fileID: 8300000, guid: 69a4cf1a64f5d0141976c3b4fb039c85, type: 3}
+    - target: {fileID: 3856851518540055578, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_Size.y
+      value: 1.139302
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856851518540055578, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.3526739
+      objectReference: {fileID: 0}
     - target: {fileID: 3987779852514971672, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: m_SortingOrder
       value: 10

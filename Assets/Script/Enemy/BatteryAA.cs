@@ -15,9 +15,16 @@ public class BatteryAA : MonoBehaviour
     public GameObject itemCoin;
     public GameObject EnemyDie;
 
+    public GameObject DieCount;
+
+    private void Start()
+    {
+        //DieCount = GameObject.Find("MonsterSummoner");
+    }
+
     private void Update()
     {
-
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,24 +41,26 @@ public class BatteryAA : MonoBehaviour
 
             if (Hp <= 0)
             {
-                int ran = Random.Range(0, 9);//아이템(코인)드랍
-                if(ran < Ran)//확률 조정
+                /*int ran = Random.Range(0, 9);//아이템(코인)드랍
+                if (ran < Ran)//확률 조정
                 {
                     Debug.Log("Not Item");
                 }
                 else
                 {
-                    for (int i = 0; i >= coin; i++)
-                    {
-                        Instantiate(itemCoin, transform.position, itemCoin.transform.rotation);//코인떨구기
-                    }
-                }
+                    
+                }*/
 
                 Instantiate(EnemyDie, transform.position, transform.rotation);//죽을시 이펙트와 사운드
 
+                for (int i = 0; i < coin; i++)
+                {
+                    Instantiate(itemCoin, transform.position, itemCoin.transform.rotation);//코인떨구기
+                }
+
+                DieCount.GetComponent<MonsterSummoner>().EnemyDie++;
                 Destroy(Body);
             }
         }
-
     }
 }
