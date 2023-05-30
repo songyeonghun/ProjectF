@@ -106,7 +106,7 @@ MonoBehaviour:
   - {fileID: 2269196470214100354, guid: b6bb708fc58c2dd42a9a4d7d42f7d956, type: 3}
   - {fileID: 1344953944982391933, guid: f6d9b867a0fb9964e9ca91f79763ad2e, type: 3}
   - {fileID: 485013900035023856, guid: 280ab7fa0d6650f4c889403f376f03f4, type: 3}
-  - {fileID: 0}
+  - {fileID: 6195190083013251189, guid: de8878757164f0d4ca10bfaa67eba182, type: 3}
 --- !u!58 &4575669991554643620
 CircleCollider2D:
   m_ObjectHideFlags: 0

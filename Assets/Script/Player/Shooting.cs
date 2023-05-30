@@ -9,7 +9,7 @@ public class Shooting : MonoBehaviour
     int[] HpRegen={ 50, 0, 55, 0, 60, 0, 65, 0, 70, 0, 80};
 
     //¹«±âÁ¾·ù¸¦ ÆÇ´ÜÇÏ´Â º¯¼ö
-    static public int Weapon = 0;     //0¾øÀ½, 1±ÇÃÑ, 2±â°üÃÑ, ¼¦°Ç 
+    static public int Weapon;     //0¾øÀ½, 1±ÇÃÑ, 2±â°üÃÑ, ¼¦°Ç 
     public AudioClip[] sound;
     public AudioSource audio;
 
@@ -38,7 +38,12 @@ public class Shooting : MonoBehaviour
 
     //ÅºÈ¯
     public Text Ammo;
+    public Text UsHpText;
 
+    private void Awake()
+    {
+        Weapon = 0;
+    }
     private void Start()
     {
         weapon = GetComponent<SpriteRenderer>();
@@ -48,13 +53,17 @@ public class Shooting : MonoBehaviour
         if (Weapon == 1)
         {
             weapon.sprite = pistol;
-        }else if (Weapon == 2)
+            UsHpText.text = "" + UseHp[Weapon];
+        }
+        else if (Weapon == 2)
         {
             weapon.sprite = rifle;
+            UsHpText.text = "" + UseHp[Weapon];
         }
         else if (Weapon == 3)
         {
             weapon.sprite = shotgun;
+            UsHpText.text = "" + UseHp[Weapon];
         }
 
         gameObject.transform.localPosition = new Vector2(0, 0);

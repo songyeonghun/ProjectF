@@ -11,7 +11,7 @@ public class WeaponUI : MonoBehaviour
 
     void Update()
     {
-        if (Shooting.Weapon == 1)
+        if ( Shooting.Weapon== 1)
         {
             gameObject.GetComponent<Image>().sprite = Pistol;
         }

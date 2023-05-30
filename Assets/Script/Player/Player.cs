@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     public Text Key;
     public Text Emp;
     public Text Coin;
+    public Text CText;
+    public Text HText;
 
     static public int HaveEmp = 0;
     static public int HaveKey = 0;
@@ -72,11 +74,9 @@ public class Player : MonoBehaviour
         Key.text = "" + HaveKey;
         Emp.text = "" + HaveEmp;
         Coin.text = "" + HaveCoin;
+        CText.text = "" + HealCoin[HealCount];
+        HText.text = "" + MaxHp * 0.3f;
 
-        /*if (CurrentHp > MaxHp)
-        {
-            CurrentHp = MaxHp;
-        }*/
         //ÀÌµ¿
         //Á×À½
         if (CurrentHp <= 0)
