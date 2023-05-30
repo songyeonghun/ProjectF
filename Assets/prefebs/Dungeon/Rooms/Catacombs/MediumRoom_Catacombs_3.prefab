@@ -43601,6 +43601,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7392707928618954165}
     - target: {fileID: 2387100843240435202, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
       propertyPath: m_Name
       value: Battery_9V_Pink (1)
@@ -43739,6 +43743,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7392707928618954165}
     - target: {fileID: 2387100843240435202, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
       propertyPath: m_Name
       value: Battery_AA_Blue (1)
@@ -43877,6 +43885,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7392707928618954165}
     - target: {fileID: 2387100843240435202, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
       propertyPath: m_Name
       value: Battery_AA_Blue (2)
@@ -43948,6 +43960,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7392707928618954165}
     - target: {fileID: 2387100843240435202, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
       propertyPath: m_Name
       value: Battery_LR_Orange
@@ -44019,6 +44035,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: e69adb848a55cf744b304485a44798c2, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7392707928618954165}
     - target: {fileID: 2387100843240435202, guid: e69adb848a55cf744b304485a44798c2, type: 3}
       propertyPath: m_Name
       value: Battery_CR_Silver
@@ -44284,6 +44304,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5804687415462828429, guid: a1d2fd99bca34b54cbb4a3dc4f6b613e, type: 3}
   m_PrefabInstance: {fileID: 5008669056769757255}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7392707928618954165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2529458699266391538, guid: a1d2fd99bca34b54cbb4a3dc4f6b613e, type: 3}
+  m_PrefabInstance: {fileID: 5008669056769757255}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5274054200989048523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44358,6 +44383,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7392707928618954165}
     - target: {fileID: 2387100843240435202, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
       propertyPath: m_Name
       value: Battery_AA_Blue
@@ -44429,6 +44458,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: e87a5abe71887984da346d506f2f019c, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7392707928618954165}
     - target: {fileID: 2387100843240435202, guid: e87a5abe71887984da346d506f2f019c, type: 3}
       propertyPath: m_Name
       value: Battery_AAA_Red
@@ -44500,6 +44533,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7392707928618954165}
     - target: {fileID: 2387100843240435202, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
       propertyPath: m_Name
       value: Battery_9V_Pink
@@ -44554,13 +44591,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
---- !u!4 &6503446895999502723 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
-  m_PrefabInstance: {fileID: 8890191353586870149}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6503446895999502727 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2387100843240435202, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
+  m_PrefabInstance: {fileID: 8890191353586870149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6503446895999502723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
   m_PrefabInstance: {fileID: 8890191353586870149}
   m_PrefabAsset: {fileID: 0}

@@ -15,11 +15,11 @@ public class BatteryAA : MonoBehaviour
     public GameObject itemCoin;
     public GameObject EnemyDie;
 
-    GameObject DieCount;
+    public GameObject DieCount;
 
     private void Start()
     {
-        DieCount = GameObject.Find("MonsterSummoner");
+        //DieCount = GameObject.Find("MonsterSummoner");
     }
 
     private void Update()

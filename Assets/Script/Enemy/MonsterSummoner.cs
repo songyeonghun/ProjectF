@@ -35,6 +35,8 @@ public class MonsterSummoner : MonoBehaviour
             OpenDoor1.GetComponent<Door>().isClear = true;
             OpenDoor2.GetComponent<Door>().isClear = true;
             OpenDoor3.GetComponent<Door>().isClear = true;
+
+            Destroy(gameObject);
         }
     }
 
@@ -50,10 +52,10 @@ public class MonsterSummoner : MonoBehaviour
 
     void Summon()
     {
-        Debug.Log("¹Ù±ù");
+        //Debug.Log("¹Ù±ù");
         for (int i = 0; i < Num; i++)
         {
-            Debug.Log("¾È");
+            //Debug.Log("¾È");
             monster[i].SetActive(true);
         }
     }

@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossHP : MonoBehaviour
 {
     public GameObject Body;
 
-    public int Hp=10;
-    public int coin = 0;
+    public int Hp = 700;
 
     int Damage;
 
@@ -15,16 +15,21 @@ public class BossHP : MonoBehaviour
     public GameObject MoonStone;
     public GameObject EnemyDie;
 
-    GameObject DieCount;
+    public GameObject DieCount;
+
+    public Image HealthBar;
+    int health;
 
     private void Start()
     {
-        DieCount = GameObject.Find("MonsterSummoner");
+        //DieCount = GameObject.Find("MonsterSummoner");
+
+        health = Hp;
     }
 
     private void Update()
     {
-        
+        HealthBar.fillAmount = (float)Hp / health;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,21 +46,9 @@ public class BossHP : MonoBehaviour
 
             if (Hp <= 0)
             {
-                /*int ran = Random.Range(0, 9);//아이템(코인)드랍
-                if(ran < Ran)//확률 조정
-                {
-                    Debug.Log("Not Item");
-                }
-                else
-                {
-                    for (int i = 0; i >= coin; i++)
-                    {
-                        Instantiate(itemCoin, transform.position, itemCoin.transform.rotation);//코인떨구기
-                    }
-                }*/
-
                 Instantiate(EnemyDie, transform.position, transform.rotation);//죽을시 이펙트와 사운드
-                Instantiate(Nasa, transform.position, Nasa.transform.rotation);//코인떨구기
+                Instantiate(Nasa, transform.position + new Vector3(0, -5, 0), transform.rotation);//코인떨구기
+                Instantiate(MoonStone, transform.position, transform.rotation);
 
                 DieCount.GetComponent<MonsterSummoner>().EnemyDie++;
 

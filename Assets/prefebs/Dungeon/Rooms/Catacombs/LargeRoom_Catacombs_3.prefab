@@ -79429,6 +79429,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: e69adb848a55cf744b304485a44798c2, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: e69adb848a55cf744b304485a44798c2, type: 3}
       propertyPath: m_Name
       value: Battery_CR_Silver (2)
@@ -79567,6 +79571,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: e87a5abe71887984da346d506f2f019c, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: e87a5abe71887984da346d506f2f019c, type: 3}
       propertyPath: m_Name
       value: Battery_AAA_Red
@@ -79621,14 +79629,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e87a5abe71887984da346d506f2f019c, type: 3}
---- !u!4 &2793632040303870845 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: e87a5abe71887984da346d506f2f019c, type: 3}
-  m_PrefabInstance: {fileID: 568674130662518139}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2793632040303870841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2387100843240435202, guid: e87a5abe71887984da346d506f2f019c, type: 3}
+  m_PrefabInstance: {fileID: 568674130662518139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2793632040303870845 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: e87a5abe71887984da346d506f2f019c, type: 3}
   m_PrefabInstance: {fileID: 568674130662518139}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1435239722757259504
@@ -79638,6 +79646,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
       propertyPath: m_Name
       value: Battery_AA_Blue
@@ -79709,6 +79721,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
       propertyPath: m_Name
       value: Battery_AA_Blue (1)
@@ -79780,6 +79796,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
       propertyPath: m_Name
       value: Battery_LR_Orange (2)
@@ -79851,6 +79871,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
       propertyPath: m_Name
       value: Battery_LR_Orange
@@ -79905,14 +79929,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
---- !u!4 &4217616018958540382 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
-  m_PrefabInstance: {fileID: 1992654808647266392}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4217616018958540378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2387100843240435202, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
+  m_PrefabInstance: {fileID: 1992654808647266392}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4217616018958540382 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
   m_PrefabInstance: {fileID: 1992654808647266392}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3732481575478952309
@@ -79972,14 +79996,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e5f7f96754d51408aa51e353a3f857, type: 3}
---- !u!4 &8728787086535665923 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5399413171350186102, guid: f2e5f7f96754d51408aa51e353a3f857, type: 3}
-  m_PrefabInstance: {fileID: 3732481575478952309}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5185847414485492081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8375468839316758532, guid: f2e5f7f96754d51408aa51e353a3f857, type: 3}
+  m_PrefabInstance: {fileID: 3732481575478952309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8728787086535665923 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5399413171350186102, guid: f2e5f7f96754d51408aa51e353a3f857, type: 3}
   m_PrefabInstance: {fileID: 3732481575478952309}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4920309750044457192
@@ -79989,6 +80013,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: e69adb848a55cf744b304485a44798c2, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: e69adb848a55cf744b304485a44798c2, type: 3}
       propertyPath: m_Name
       value: Battery_CR_Silver
@@ -80060,6 +80088,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: e87a5abe71887984da346d506f2f019c, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: e87a5abe71887984da346d506f2f019c, type: 3}
       propertyPath: m_Name
       value: Battery_AAA_Red (1)
@@ -80114,14 +80146,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e87a5abe71887984da346d506f2f019c, type: 3}
---- !u!1 &7349887679406256715 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2387100843240435202, guid: e87a5abe71887984da346d506f2f019c, type: 3}
-  m_PrefabInstance: {fileID: 5125277206459063369}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7349887679406256719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: e87a5abe71887984da346d506f2f019c, type: 3}
+  m_PrefabInstance: {fileID: 5125277206459063369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7349887679406256715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2387100843240435202, guid: e87a5abe71887984da346d506f2f019c, type: 3}
   m_PrefabInstance: {fileID: 5125277206459063369}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5284597957862468360
@@ -80281,6 +80313,11 @@ PrefabInstance:
       objectReference: {fileID: 4257521784268342800}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1d2fd99bca34b54cbb4a3dc4f6b613e, type: 3}
+--- !u!1 &7659735243408987898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2529458699266391538, guid: a1d2fd99bca34b54cbb4a3dc4f6b613e, type: 3}
+  m_PrefabInstance: {fileID: 5284597957862468360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1862464553899668101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5804687415462828429, guid: a1d2fd99bca34b54cbb4a3dc4f6b613e, type: 3}
@@ -80293,6 +80330,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
       propertyPath: m_Name
       value: Battery_9V_Pink
@@ -80347,14 +80388,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
---- !u!1 &8296430437530494025 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2387100843240435202, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
-  m_PrefabInstance: {fileID: 5909417701257759307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8296430437530494029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
+  m_PrefabInstance: {fileID: 5909417701257759307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8296430437530494025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2387100843240435202, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
   m_PrefabInstance: {fileID: 5909417701257759307}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6629348336598120306
@@ -80364,6 +80405,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
       propertyPath: m_Name
       value: Battery_AA_Blue (2)
@@ -80418,14 +80463,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
---- !u!4 &9016350086210279796 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
-  m_PrefabInstance: {fileID: 6629348336598120306}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9016350086210279792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2387100843240435202, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
+  m_PrefabInstance: {fileID: 6629348336598120306}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9016350086210279796 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: 15d28260eea46e140b2aa9bafb40784f, type: 3}
   m_PrefabInstance: {fileID: 6629348336598120306}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6801958087040035217
@@ -80485,14 +80530,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2e5f7f96754d51408aa51e353a3f857, type: 3}
---- !u!1 &3053102306901477781 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8375468839316758532, guid: f2e5f7f96754d51408aa51e353a3f857, type: 3}
-  m_PrefabInstance: {fileID: 6801958087040035217}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1480551211529224679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5399413171350186102, guid: f2e5f7f96754d51408aa51e353a3f857, type: 3}
+  m_PrefabInstance: {fileID: 6801958087040035217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3053102306901477781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8375468839316758532, guid: f2e5f7f96754d51408aa51e353a3f857, type: 3}
   m_PrefabInstance: {fileID: 6801958087040035217}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6817723550260114194
@@ -80502,6 +80547,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: e69adb848a55cf744b304485a44798c2, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: e69adb848a55cf744b304485a44798c2, type: 3}
       propertyPath: m_Name
       value: Battery_CR_Silver (1)
@@ -80573,6 +80622,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
       propertyPath: m_Name
       value: Battery_9V_Pink (2)
@@ -80644,6 +80697,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
       propertyPath: m_Name
       value: Battery_9V_Pink (1)
@@ -80698,14 +80755,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
---- !u!4 &4954882595864311529 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
-  m_PrefabInstance: {fileID: 7341967908360181999}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4954882595864311533 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2387100843240435202, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
+  m_PrefabInstance: {fileID: 7341967908360181999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4954882595864311529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: d48cb25edd2e77a429416c5424eddd0e, type: 3}
   m_PrefabInstance: {fileID: 7341967908360181999}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8042979409723006714
@@ -80715,6 +80772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: e87a5abe71887984da346d506f2f019c, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: e87a5abe71887984da346d506f2f019c, type: 3}
       propertyPath: m_Name
       value: Battery_AAA_Red (2)
@@ -80769,14 +80830,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e87a5abe71887984da346d506f2f019c, type: 3}
---- !u!4 &5674193277699731708 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: e87a5abe71887984da346d506f2f019c, type: 3}
-  m_PrefabInstance: {fileID: 8042979409723006714}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5674193277699731704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2387100843240435202, guid: e87a5abe71887984da346d506f2f019c, type: 3}
+  m_PrefabInstance: {fileID: 8042979409723006714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5674193277699731708 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2387100843240435206, guid: e87a5abe71887984da346d506f2f019c, type: 3}
   m_PrefabInstance: {fileID: 8042979409723006714}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8354237919862078571
@@ -80786,6 +80847,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8227588318318580144}
     m_Modifications:
+    - target: {fileID: 448754333, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
+      propertyPath: DieCount
+      value: 
+      objectReference: {fileID: 7659735243408987898}
     - target: {fileID: 2387100843240435202, guid: 650d971bc9221294c9d0e729d5f7f754, type: 3}
       propertyPath: m_Name
       value: Battery_LR_Orange (1)

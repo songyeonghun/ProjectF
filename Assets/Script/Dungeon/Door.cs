@@ -46,6 +46,12 @@ public class Door : MonoBehaviour
             spriteRenderer.sprite = sprites[0];
             boxCollider.enabled = false;
         }
+
+        if(collision.gameObject.tag=="collisionTilemap")
+        {
+            Debug.Log("ÆÄ±«");
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
