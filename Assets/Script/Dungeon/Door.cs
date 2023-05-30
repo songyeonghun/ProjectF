@@ -50,7 +50,7 @@ public class Door : MonoBehaviour
         if(collision.gameObject.tag=="collisionTilemap")
         {
             Debug.Log("ÆÄ±«");
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

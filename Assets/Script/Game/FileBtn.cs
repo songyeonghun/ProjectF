@@ -9,6 +9,7 @@ public class FileBtn : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("2WaitRoom");
+        Time.timeScale = 1f;
         Destroy(player);
     }
 

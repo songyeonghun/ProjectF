@@ -1840,8 +1840,8 @@ Camera:
   m_GameObject: {fileID: 4245015453288010369}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1858,7 +1858,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4116,12 +4116,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5795811666528309166, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795811666528309166, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: m_SortingOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795811666528309166, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -653709415
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240668983182888060, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6240668983182888060, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: m_SortingOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6240668983182888060, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -653709415
       objectReference: {fileID: 0}
     - target: {fileID: 7216895552344229341, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: Hp
@@ -4244,8 +4260,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7330386582595599505}
     - target: {fileID: 8356400162743562803, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356400162743562803, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356400162743562803, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -653709415
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81a8bc2af66eb9645bdf54dd5ff43baa, type: 3}

@@ -34,7 +34,7 @@ public class Battery9VAI : MonoBehaviour
     public Transform Enemy; //각도 재는 용도
     //public Transform AngleTarget;
 
-    private void Start()
+    private void Awake()
     {
         agent = this.GetComponent<NavMeshAgent>();
         agent.updateRotation = false;

@@ -235,7 +235,8 @@ public class Player : MonoBehaviour
         Shooting.atkCool = true;
         movement.x = 0;
         movement.y = 0;
-        yield return new WaitForSeconds(2f);    //죽음 애니메이션 시간
+        yield return new WaitForSeconds(2f);//죽음 애니메이션 시간
+        Time.timeScale = 0;
         DeadFile.SetActive(true);                   //이후 서류철 오픈
     }
 
