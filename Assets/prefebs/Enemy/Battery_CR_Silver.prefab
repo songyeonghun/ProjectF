@@ -167,9 +167,9 @@ GameObject:
   - component: {fileID: 2387100843240435200}
   - component: {fileID: 2387100843240435211}
   - component: {fileID: 2387100843240435201}
+  - component: {fileID: 2330347248845761739}
   - component: {fileID: 918719659}
   - component: {fileID: 1091797306}
-  - component: {fileID: 2330347248845761739}
   m_Layer: 21
   m_Name: Battery_CR_Silver
   m_TagString: Enemy
@@ -284,6 +284,23 @@ NavMeshAgent:
   m_BaseOffset: 1.25
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2330347248845761739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2387100843240435202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e09c0708dbd7e444a8136179c569a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 56579956926916303, guid: 9db468ba43f679f4f8164d842ebed17e, type: 3}
+  firepoint: {fileID: 2387100842155849502}
+  Attack: {fileID: 8300000, guid: 30a9f67c08aa9194d9a564ea62fdb74b, type: 3}
+  rb: {fileID: 2387100842155849501}
+  Enemy: {fileID: 2364729065778994547}
 --- !u!95 &918719659
 Animator:
   serializedVersion: 3
@@ -399,23 +416,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2330347248845761739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2387100843240435202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e09c0708dbd7e444a8136179c569a65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 56579956926916303, guid: 9db468ba43f679f4f8164d842ebed17e, type: 3}
-  firepoint: {fileID: 2387100842155849502}
-  Attack: {fileID: 8300000, guid: 30a9f67c08aa9194d9a564ea62fdb74b, type: 3}
-  rb: {fileID: 2387100842155849501}
-  Enemy: {fileID: 2364729065778994547}
 --- !u!1 &8663748861875798850
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 2364729065778994547}
   - component: {fileID: 448754333}
   - component: {fileID: 6316853802705563911}
+  - component: {fileID: 7163509197637366862}
   m_Layer: 15
   m_Name: Body
   m_TagString: Enemy
@@ -477,6 +478,22 @@ CircleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6
+--- !u!58 &7163509197637366862
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8663748861875798850}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

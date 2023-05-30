@@ -9,7 +9,6 @@ public class Battery9VAI : MonoBehaviour
 {
     public GameObject bulletPrefab;          //총 발사시 생성될 탄환
     public Transform firepoint;                 //총알이 발사될 위치
-    public static Animator anim;
     public GameObject AttackEffect;
     
     GameObject target;                    //추적할 상대
@@ -27,7 +26,8 @@ public class Battery9VAI : MonoBehaviour
 
     float atkCool = 2f;                      //공격딜레이 시간(인스펙터창에서 수정)
     float bulletForce = 10f;                    //총알 속도
-    float Angle = 0;
+    private float Angle = 0;
+    private Animator anim;
 
     //int attackCount = 0;
 
@@ -36,13 +36,13 @@ public class Battery9VAI : MonoBehaviour
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        agent = this.GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         target = GameObject.FindGameObjectWithTag("Player");
 
-        anim = GetComponent<Animator>();
-        rend = GetComponent<SpriteRenderer>();
+        anim = this.GetComponent<Animator>();
+        rend = this.GetComponent<SpriteRenderer>();
     }
 
     private void Update()

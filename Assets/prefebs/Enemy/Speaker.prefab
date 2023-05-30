@@ -500,7 +500,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2364729065778994547}
   - component: {fileID: 1838932177}
-  - component: {fileID: 448754333}
+  - component: {fileID: 1855169346360152380}
+  - component: {fileID: 1184890822532965132}
   m_Layer: 15
   m_Name: Body
   m_TagString: Enemy
@@ -548,7 +549,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.8551254, y: 2.8198798}
   m_EdgeRadius: 0
---- !u!114 &448754333
+--- !u!61 &1855169346360152380
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8663748861875798850}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.011542559, y: 0.020226836}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.87351, y: 2.8198798}
+  m_EdgeRadius: 0
+--- !u!114 &1184890822532965132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -557,12 +584,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8663748861875798850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52b2ba86c8245f6468e63d68a4d6e1a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f90fddc508adb84bb9b5f196adf35bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Body: {fileID: 2387100843240435202}
+  Body: {fileID: 8663748861875798850}
   Hp: 700
-  Ran: 5
-  coin: 1
-  itemCoin: {fileID: 3661153971609381307, guid: e154f3c133a666e42890eed59df12a61, type: 3}
-  EnemyDie: {fileID: 4819539885009302124, guid: 2065f838232ad0641a756ce33810f509, type: 3}
+  coin: 0
+  Nasa: {fileID: 1943884122876641044, guid: 40609e0795710574482bf206c38a4af8, type: 3}
+  MoonStone: {fileID: 4512133707625267139, guid: 559529afe6e53f541ac4b9b9c7db9d85, type: 3}
+  EnemyDie: {fileID: 4819539885009302124, guid: 1001cb55bbc618c4798bf0b1cf68047e, type: 3}

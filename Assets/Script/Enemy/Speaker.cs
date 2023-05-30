@@ -16,7 +16,7 @@ public class Speaker : MonoBehaviour
     public Transform firepoint;                 //총알이 발사될 위치
     public Transform firepoint1;
     public Transform firepoint2;
-    public static Animator anim;
+    private Animator anim;
     //public GameObject AttackEffect;
 
     GameObject target;                    //추적할 상대
@@ -44,8 +44,8 @@ public class Speaker : MonoBehaviour
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
-        rend = GetComponent<SpriteRenderer>();
+        anim = this.GetComponent<Animator>();
+        rend = this.GetComponent<SpriteRenderer>();
 
         Invoke("Think", 5f);
     }
@@ -160,7 +160,7 @@ public class Speaker : MonoBehaviour
 
         curPatternCount++;
         if (curPatternCount < maxPatternCount[patternIndex])
-            Invoke("FireLine1", 1f);
+            Invoke("FireLine1", 0.5f);
         else
         {
             anim.SetBool("isAttack", false);
@@ -174,7 +174,7 @@ public class Speaker : MonoBehaviour
         anim.SetBool("isAttack", true);
 
         GameObject bullet = Instantiate(bulletPrefab4);
-        bullet.transform.position = firepoint.position + new Vector3(0, -2f, 0);
+        bullet.transform.position = firepoint.position + new Vector3(0, -5f, 0);
         bullet.transform.rotation = Quaternion.identity;
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
