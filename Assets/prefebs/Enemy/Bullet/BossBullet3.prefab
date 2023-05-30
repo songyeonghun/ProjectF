@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6705617865385611634}
   - component: {fileID: 1041751748246174695}
   m_Layer: 16
-  m_Name: Battery_AAA_Bullet
+  m_Name: BossBullet3
   m_TagString: enemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ SpriteRenderer:
   m_SortingLayerID: 1025438153
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1075222833954291860, guid: 7df66d7a7503fb141a10aa791df5e396, type: 3}
+  m_Sprite: {fileID: 7919044828672085045, guid: efc60830271ce5549a79e9b24291265e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,7 +118,7 @@ Animator:
   m_GameObject: {fileID: 56579956926916303}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2f7d186a1bf4d8b4ba9ae67703fce57a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5aa310f9e3300f94db41322a02a90ece, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

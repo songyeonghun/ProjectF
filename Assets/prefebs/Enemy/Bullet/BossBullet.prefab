@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6705617865385611634}
   - component: {fileID: 1041751748246174695}
   m_Layer: 16
-  m_Name: Battery_AAA_Bullet
+  m_Name: BossBullet
   m_TagString: enemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

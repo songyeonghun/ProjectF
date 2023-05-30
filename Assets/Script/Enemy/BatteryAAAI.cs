@@ -133,7 +133,7 @@ public class BatteryAAAI : MonoBehaviour
     void Shoot()
     {
         attackCount++;
-        Debug.Log("공격");
+        //Debug.Log("공격");
         //공격
         AudioSource.PlayClipAtPoint(Attack, transform.position);
         GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
