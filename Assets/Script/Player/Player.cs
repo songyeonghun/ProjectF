@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 
     //UI
     public GameObject DeadFile;
+    public Image File;
+    public Sprite ClearFile;
     public GameObject Menu;
     public Image HealGauge;
     public GameObject HealGaugeMax;
@@ -48,7 +50,7 @@ public class Player : MonoBehaviour
          new int[]{ 10,11,12,13,14,15},                                    //2 이동속도
     };
 
-    int[] HealCoin = { 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 100};
+    int[] HealCoin = { 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 100, 999};
     int HealCount = 0;
 
     void Start()
@@ -113,6 +115,7 @@ public class Player : MonoBehaviour
         //제화 회복
         if (Input.GetKey(KeyCode.LeftShift)&&HaveCoin>=HealCoin[HealCount]&&CurrentHp<MaxHp)
         {
+            if(HealCount<12)
             Heal();
         }
         else
@@ -184,6 +187,7 @@ public class Player : MonoBehaviour
             if(CurrentHp>MaxHp)
             {
                 CurrentHp = MaxHp;
+                HealCount++;
             }
 
             time = 0;
@@ -235,6 +239,7 @@ public class Player : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Stone")
         {
+            File.sprite = ClearFile;
             StartCoroutine(dead(0.5f));
             Destroy(collision.gameObject);
         }

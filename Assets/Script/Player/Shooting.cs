@@ -24,6 +24,9 @@ public class Shooting : MonoBehaviour
     static public bool atkCool = false;                     //공속및 딜레이 관련
     int[] ammo = { 0, 0, 0, 0 };                                //사용한 총알
     float[] UseHpCount= {0 ,0 ,0 ,0 };                          //사용한 체력
+    bool isReload = false;
+
+
     SpriteRenderer weapon;
     public Sprite pistol;
     public Sprite rifle;
@@ -76,8 +79,9 @@ public class Shooting : MonoBehaviour
         }
         
         //장전
-        if (Input.GetKeyDown("r"))
+        if (Input.GetKeyDown("r")&&isReload==false)
         {
+            isReload = true;
             ammo[Weapon] = Maxammo[Weapon];
             StartCoroutine(Reload());
         }
@@ -134,6 +138,7 @@ public class Shooting : MonoBehaviour
         ammo[Weapon] = 0;
         UseHpCount[Weapon] = 0;
         atkCool = false;
+        isReload = false;
     }
 
     //장전시 필요한 카운트
